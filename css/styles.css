@@ -1,0 +1,44 @@
+.dropdown-toggle::after {
+    display:none
+}
+
+.actor-card {
+	padding-top: 15px;
+}
+
+.actor-img {
+
+	width: 50%;
+	padding-top: 10%;
+	
+}
+
+.alone-actor-img {
+	width: 80%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.actor-media {
+	padding-top: 2%;
+}
+
+.paragraph {
+	
+	text-align: left;
+	
+}
+
+.breadcrumb-link {
+    color: black;
+}
+.breadcrumb-link:visited {
+    color: black;
+}
+.breadcrumb-link:hover {
+    color: white;
+	text-decoration: none;
+}
+.breadcrumb-link:active {
+    color: white;
+}
