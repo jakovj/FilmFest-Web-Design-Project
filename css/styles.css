@@ -1,5 +1,11 @@
+
+.social-links::hover {
+	text-decoration: none;
+	color: red;
+}
+
 .dropdown-toggle::after {
-    display:none
+    display:none;
 }
 
 .actor-card {
