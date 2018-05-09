@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-		function change() {
-			document.location.href = "index_eng.html";
-		}
 		
-		</script>
-		<title>FF - Glumci</title>
+		<title>FF - Vesti</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
 		
-	</head>
-	
-	<body >
 		<div class="row" style="background-image: url('../images/back2.jpg');background-size:cover;width:100%;margin:0px;">
 			<div class="col-lg-12">
 				<div class="float-right" style="padding:1%;">
@@ -36,6 +28,10 @@
 			
 			
 		</div>
+	</head>
+	
+	<body >
+		
 		<nav class="stroke navbar navbar-expand-md navbar-dark" style="background-image: url('../images/pattern.png');" >
 			<!-- logo -->
 			<a class="navbar-brand" href="index.html"><img src="../images/festival-logo.png" alt="LOGO" style="width:70px;"></a>
@@ -64,10 +60,10 @@
 							 <a class="dropdown-item" href="trecidan.html">3. Dan</a>
 						</div>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="glumci.html"><h3>Glumci</h3></a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="vesti.html"><h3>Vesti</h3></a>
 					</li>
 				</ul>
@@ -76,48 +72,122 @@
 		
 		<div class="container" style="padding-top:20px;">
 			<div class="row">
-				<div class="col-12">
-					<ul class="breadcrumb">
-						<li class="breadcrumb-item"><a href="glumci.html" class="breadcrumb-link">Glumci</a></li>
-						<li class="breadcrumb-item active">Glumac1</li>
-					</ul>
+				<div class="col-9">
+						<div id="demo" class="carousel slide container" style="margin-top:10px;" data-ride="carousel">
+				
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+				</ul>
+				
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<center><h3>Rekordna poseta prosle godine</h3></center>
+						<p>
+							Za vreme proslogodisnjeg festivala 2017. godine, nase filmove je gledalo preko 5000 ljudi.
+							Ovo je rekordna poseta u prethodnih 5 godina, ali ove godine se ocekuje jos vise gostiju.
+						</p>
+						<img src="../images/festivalimg1.jpg" alt="Vest1" width="100%">
+						
+					</div>
+					<div class="carousel-item">
+						<center><h3>Rekordna poseta prosle godine</h3></center>
+						<p>
+							Za vreme proslogodisnjeg festivala 2017. godine, nase filmove je gledalo preko 5000 ljudi.
+							Ovo je rekordna poseta u prethodnih 5 godina, ali ove godine se ocekuje jos vise gostiju.
+						</p>
+						<img src="../images/festivalimg2.jpg" alt="Vest2" width="100%">
+						
+					</div>
+					<div class="carousel-item">
+						<center><h3>Rekordna poseta prosle godine</h3></center>
+						<p>
+							Za vreme proslogodisnjeg festivala 2017. godine, nase filmove je gledalo preko 5000 ljudi.
+							Ovo je rekordna poseta u prethodnih 5 godina, ali ove godine se ocekuje jos vise gostiju.
+						</p>
+						<img src="../images/festivalimg3.jpg" alt="Vest3" width="100%">
+						
+					</div>
 				</div>
+				
+				<!-- Left and right controls -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+				
 			</div>
-			<div class="row">
-					<div class="media actor-media">
-						<div class="col-3 col-lg-6">
-						<div class="media-left">
-							<img class="alone-actor-img rounded-circle" src="../images/actor.jpg">
-						</div>
-						</div>
-						<div class="col-9 col-lg-6">
-						<div class="media-body">
-							<div class="media-text">
-								<center>
-								
-									<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-									</p>
-									<hr>
-									<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-									</p>
-								
-								</center>
+				</div>
+				
+				<div class="col-3">
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
 							</div>
 						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
 						</div>
 					</div>
-			</div>
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
+						</div>
+					</div>
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
+						</div>
+					</div>
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
+						</div>
+					</div>
+				</div>
 			
 			</div>
+			<div class="row">
+				<div class="col-12" style="padding-top:5%">
+					<center><img src="../images/banner.jpg" width="100%"></center>
+				</div>
+			</div>
+		
 		</div>
-			<hr>
-			<footer>
+		
+		
+		
+		<hr>
+		<footer>
 				<div class="row" style="margin:0px;padding:10px;">
 					
 					<div class="col-4">
@@ -147,10 +217,6 @@
 			</div>
 			</footer>
 		
-		
-		
-		
-		
 
 	
 	<!-- jQuery library -->
@@ -161,5 +227,5 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	</body>
+</body>
 </html>

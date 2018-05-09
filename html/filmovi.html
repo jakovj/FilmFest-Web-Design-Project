@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-			function change() {
-				document.location.href = "index.html";
-			}
 		
-		</script>
-		<title>FF - Home</title>
+		<title>FF - Filmovi</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
@@ -28,13 +23,18 @@
 				<h1 style="color:white;" >6.5-10.5</h1>
 			</div>			
 		</div>
+			
+			
+			
+			
+		</div>
 	</head>
 	
 	<body >
 		
 		<nav class="stroke navbar navbar-expand-md navbar-dark" style="background-image: url('../images/pattern.png');" >
 			<!-- logo -->
-			<a class="navbar-brand" href="idnex_eng.html"><img src="../images/festival-logo.png" alt="LOGO" style="width:70px;"></a>
+			<a class="navbar-brand" href="index.html"><img src="../images/festival-logo.png" alt="LOGO" style="width:70px;"></a>
 			
 			<!-- kada se smanji prozor da se pojavi collapse button -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -44,27 +44,27 @@
 			<!-- likovi -->
 			<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
 				<ul class="navbar-nav mx-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html" ><h3>Home</h3></a>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html" ><h3>Pocetna</h3></a>
 					</li>
 					
 					<li class="nav-item">
-						<a class="nav-link" href="ofestivalu.html"><h3>About</h3></a>
+						<a class="nav-link" href="ofestivalu.html"><h3>O festivalu</h3></a>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown active">
 						<a class="nav-link dropdown-toggle" id="program-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="program.html"><h3>Program</h3></a>
 						<div class="dropdown-menu" aria-labelledby="program-dd">
-							 <a class="dropdown-item" href="movies.html">Filmovi</a>
-							 <a class="dropdown-item" href="prvidan_eng.html">1. Dan</a>
-							 <a class="dropdown-item" href="dugidan_eng.html">2. Dan</a>
-							 <a class="dropdown-item" href="trecidan_eng.html">3. Dan</a>
+							 <a class="dropdown-item active" href="filmovi.html">Filmovi</a>
+							 <a class="dropdown-item" href="prvidan.html">1. Dan</a>
+							 <a class="dropdown-item" href="drugidan.html">2. Dan</a>
+							 <a class="dropdown-item" href="trecidan.html">3. Dan</a>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="glumci.html"><h3>Actors</h3></a>
+						<a class="nav-link" href="glumci.html"><h3>Glumci</h3></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="vesti.html"><h3>News</h3></a>
+						<a class="nav-link" href="vesti.html"><h3>Vesti</h3></a>
 					</li>
 				</ul>
 			</div> 
@@ -72,28 +72,35 @@
 		
 		<div class="container" style="padding-top:20px;">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="jumbotron">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+				<div class="col-md-6 col-sm-12">
+					<div class="media">
+						<div class="media-left">
+							<img src="../images/movie1.jpg" alt="Movie1" width="100%">
+						</div>
+						<div class="media-body">
+							<h3>Naslov filma</h3>
+							<p>Detalji...</p>
+						</div>
+						
 					</div>
 				</div>
-				
+				<div class="col-md-6 col-sm-12">
+					<div class="media">
+						<div class="media-left">
+							<img src="../images/movie1.jpg" alt="Movie1" width="100%">
+						</div>
+						<div class="media-body">
+							
+							<table class="table table-striped" style="padding-left:10%">
+								<thead><tr><th><h3><strong>Star Wars</strong></h3></th></tr></thead>
+								<tr><td>Trajanje: 2h 15m</td></tr>
+								<tr><td>Reziser: George Lucas</td></tr>
+								<tr><td>Glavne uloge: Glumac1, Glumac2</td></tr>
+							</table>
+						</div>
+						
+					</div>
+				</div>
 				
 			
 			</div>

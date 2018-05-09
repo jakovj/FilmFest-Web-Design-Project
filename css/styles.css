@@ -1,4 +1,9 @@
 
+.kratka-vest {
+		
+	padding-top: 10%;
+		
+}
 .social-links::hover {
 	text-decoration: none;
 	color: red;
