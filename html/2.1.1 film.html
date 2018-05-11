@@ -7,13 +7,13 @@
 		}
 		
 		</script>
-		<title>FF - Vudrou Trejsi</title>
+		<title>FF - Skver</title>
 		<link rel="icon" href="../images/circle-logo.png">
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
-		
+		<link rel="stylesheet" href="../lightbox2-master/dist/css/lightbox.min.css">
 	</head>
 	
 	<body ><!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -141,7 +141,31 @@
 					<div class="col-12">
 						<h2>Projekcije:</h2>
 						<p>
-						 	Ovde ce biti tabela sa projekcijama i mesta projekcije
+						 	<table class="table table-striped table-light">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Datum</th>
+										<th>Vreme</th>
+										<th>Lokacija</th>
+										<th>Cena</th>
+									</tr>
+								</thead>
+								<tr>
+									<td>0</td>
+									<td>1. jun</td>
+									<td>20:00</td>
+									<td>Sava Centar</td>
+									<td>400 rsd</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2. jun</td>
+									<td>22:00</td>
+									<td>Dom Omladine</td>
+									<td>350 rsd</td>
+								</tr>
+							</table>
 						</p>
 					</div>	
 			</div>
@@ -149,18 +173,55 @@
 			<div class="row">
 					<div class="col-12">
 						<h2>Rezervisi kartu:</h2>
-						<p>
-						 	Inputi za rezervaciju...
-						</p>
+					</div>
+					
+					<div class="col-12 col-md-12">
+						
+						<form name="rezervacija">
+							<table>
+								<tr>
+									<td>Ime</td>
+									<td><input type="text" class="form-control" placeholder="Petar"></td>
+								</tr>
+								<tr>
+									<td>Prezime</td>
+									<td><input type="text" class="form-control" placeholder="Peric"></td>
+								</tr>
+								<tr>
+									<td>E-mail</td>
+									<td><input type="email" class="form-control" placeholder="example@gmail.com"></td>
+								</tr>
+								<tr>
+									<td>Broj telefona</td>
+									<td><input type="text" class="form-control" placeholder="063-123-123"></td>
+								</tr>
+								<tr>
+									<td>Projekcija</td>
+									<td><input type="text" class="form-control" placeholder="#"></td>
+								</tr>
+								<tr>
+									<td>Broj karata</td>
+									<td><input type="text" class="form-control" placeholder="0"></td>
+								</tr>
+								<tr>
+									<td colspan="2"><br><center><a href="mailto:rezervacija@filmfest.rs"><input type="button" class="btn btn-secondary-outline" value="Rezervisi" onClick=""></a></center></td>
+								</tr>
+							</table>
+							
+						</form>
 					</div>	
 			</div>
 			<hr>
 			<div class="row">
 					<div class="col-12">
-						<h2>Galerija:</h2>
-						<p>
-						 	Ovde ce biti foto galerija i video galerija
-						</p>
+						<center>
+						 	<div>
+							  <a class="example-image-link" href="../images/galerija1/slika1.jpg" data-lightbox="example-set" data-title="Picture1"><img class="example-image" src="../images/galerija1/slika1.jpg" alt="" width="20%"></a>
+							  <a class="example-image-link" href="../images/galerija1/slika2.jpg" data-lightbox="example-set" data-title="Picture2"><img class="example-image" src="../images/galerija1/slika2.jpg" alt="" width="20%"></a>
+							  <a class="example-image-link" href="../images/galerija1/slika3.jpg" data-lightbox="example-set" data-title="Picture1"><img class="example-image" src="../images/galerija1/slika3.jpg" alt="" width="20%"></a>
+							  <a class="example-image-link" href="../images/galerija1/slika4.jpg" data-lightbox="example-set" data-title="Picture2"><img class="example-image" src="../images/galerija1/slika4.jpg" alt="" width="20%"></a>
+							</div>
+						</center>
 					</div>	
 			</div>
 
@@ -192,7 +253,7 @@
 				</div>
 					<div class="col-8">
 						<br>
-						<i>
+						<i class="footer-font-resp">
 							&copy; Copyright 2018.<br>
 							Jakov Jezdic i Marko Hudomal, Odsek za Softversko inzenjerstvo Elektrotehnickog fakulteta univerziteta u Beogradu
 						<i>
@@ -207,7 +268,7 @@
 		
 		
 		
-
+	<script src="../lightbox2-master/dist/js/lightbox-plus-jquery.min.js"></script>
 	
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

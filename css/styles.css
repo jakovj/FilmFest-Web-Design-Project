@@ -1,4 +1,14 @@
 
+.actor-p {
+
+	
+	
+}
+
+.footer-font-resp {
+	font-size:calc(12px + 0.3vw);
+}
+
 .kratka-vest {
 		
 	padding-top: 10%;
@@ -41,6 +51,7 @@
 .paragraph {
 	
 	text-align: left;
+	font-size:calc(12px + 0.3vw);
 	
 }
 
