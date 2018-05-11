@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-		function change() {
-			document.location.href = "index_eng.html";
-		}
 		
-		</script>
-		<title>FF - Pocetna</title>
+		<title>FF - Moji filmovi</title>
 		<link rel="icon" href="../images/circle-logo.png">
-
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
-		
+		<link rel="stylesheet" href="../css/cards-style.css" type="text/css">
+
 	</head>
 	
 	<body >
+		
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
 		<header>
@@ -53,7 +50,7 @@
 				<!-- likovi -->
 				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
 					<ul class="navbar-nav mx-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link a-link" href="index.html" ><h3>Početna</h3></a>
 						</li>
 						
@@ -80,7 +77,7 @@
 						<li class="nav-item">
 							<a class="nav-link" href="4 vesti.html"><h3>Vesti</h3></a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a class="nav-link" href="5 mojifilmovi.html"><h3>Moji filmovi</h3></a>
 						</li>
 					</ul>
@@ -89,33 +86,30 @@
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-		<!--Content-->
+		
 		<div class="container" style="padding-top:20px;">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="jumbotron" style="background-size:cover;background-image: url('../images/naslovna.jpg'); padding-top: 180px">
-						<div class="jumbotron" style="padding-top: 5%" >
-							<h1>Dobrodosli na zvaničan sajt film fest-a</h1><br>
-							<p>Prvi film-fest, otvoren je 9. januara 1971. u Domu Sindikata, projekcijom filma "Mes" Roberta Altmana. Zamišljen kao godisnji presek najboljih filmova sezone, filmski festival <i>film fest</i> izrastao je u jednu od najznacajnijih filmskih smotri i postao jedan od glavnih dogadjaja, uz koga su odrasle mnoge mlade generacije.
-							</p>
-							<hr>
-							<p>Na ovom sajtu mozete pronaci sve informacije vezane za sam festival, ziri, nagradama, sponzorima, kontaktu, glumcima, filmovima..
-
-							</p>
-						</div>
-					</div>
+				<div class="col-12">
+						<br>
+						<h1>Moji filmovi</h1>
+						<hr>
+							<input type="button" class="btn btn-danger" value="Obrisi sve" onClick="obrisiOmiljenje()">
+						<br><br>
 				</div>
-				
-				
-			
+				<div class="col-12 col-md-6">
+					<span id="prikaz_mojih_filmova">Niste izabrali ni jedan film</span>
+				</div>
+				<br>
+				<br>
 			</div>
 		</div>
-		<br>
+		
+		
+		
 		<hr>
-
-
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Footer-->
+
 		<footer>
 			<div class="row" style="margin:0px;padding:5px;">
 				
@@ -150,8 +144,6 @@
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		
 		
-		
-		
 
 	
 	<!-- jQuery library -->
@@ -162,5 +154,5 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	</body>
+</body>
 </html>

@@ -146,19 +146,23 @@ nav ul li {
   display: inline-block;
 }
 nav ul li a {
+  font-style: none;
   display: block;
   padding: 0px;
   text-decoration: none;
   color: white;
-  font-weight: 900 ;
+  font-weight: 100;
   text-transform: uppercase;
   margin: 0 10px;
+}
+nav div ul li a.nav-link {
+  font-size:10pt !important;
 }
 nav ul li a:after {
   transition: all .5s;
 }
 nav ul li a:before {
-  transition: all 1.0s;
+  transition: all 10.0s;
 }
 nav ul li a:hover {
   color: #555;

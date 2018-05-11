@@ -41,6 +41,7 @@
 }
 
 .timeline > li > .timeline-panel {
+  background-color: white;
   width: 46%;
   float: left;
   border: 1px solid #d4d4d4;
@@ -135,6 +136,7 @@
 .timeline-title {
   margin-top: 0;
   color: inherit;
+  font-weight: 500 !important;
 }
 
 .timeline-body > p,
