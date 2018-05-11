@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-		function change() {
-			document.location.href = "index_eng.html";
-		}
 		
-		</script>
-		<title>FF - Pocetna</title>
-		<link rel="icon" href="../images/circle-logo.png">
-
+		<title>FF - Vesti</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
@@ -17,6 +10,7 @@
 	</head>
 	
 	<body >
+		
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
 		<header>
@@ -52,7 +46,7 @@
 				<!-- likovi -->
 				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
 					<ul class="navbar-nav mx-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="index.html" ><h3>Pocetna</h3></a>
 						</li>
 						
@@ -79,7 +73,7 @@
 						<li class="nav-item">
 							<a class="nav-link" href="3 glumci.html"><h3>Glumci</h3></a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a class="nav-link" href="4 vesti.html"><h3>Vesti</h3></a>
 						</li>
 					</ul>
@@ -87,34 +81,127 @@
 			</nav>
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-
-		<!--Content-->
+		
 		<div class="container" style="padding-top:20px;">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="jumbotron" style="background-size:cover;background-image: url('../images/naslovna.jpg'); padding-top: 180px">
-						<div class="jumbotron" style="padding-top: 5%" >
-							<h1>Dobrodosli na zvaničan sajt film fest-a</h1><br>
-							<p>Prvi film-fest, otvoren je 9. januara 1971. u Domu Sindikata, projekcijom filma "Mes" Roberta Altmana. Zamišljen kao godisnji presek najboljih filmova sezone, filmski festival <i>film fest</i> izrastao je u jednu od najznacajnijih filmskih smotri i postao jedan od glavnih dogadjaja, uz koga su odrasle mnoge mlade generacije.
-							</p>
-							<hr>
-							<p>Na ovom sajtu mozete pronaci sve informacije vezane za sam festival, ziri, nagradama, sponzorima, kontaktu, glumcima, filmovima..
-
-							</p>
-						</div>
+				<div class="col-9">
+						<div id="demo" class="carousel slide container" style="margin-top:10px;" data-ride="carousel">
+				
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+				</ul>
+				
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<center><h3>Rekordna poseta prosle godine</h3></center>
+						<p>
+							Za vreme proslogodisnjeg festivala 2017. godine, nase filmove je gledalo preko 5000 ljudi.
+							Ovo je rekordna poseta u prethodnih 5 godina, ali ove godine se ocekuje jos vise gostiju.
+						</p>
+						<img src="../images/festivalimg1.jpg" alt="Vest1" width="100%">
+						
+					</div>
+					<div class="carousel-item">
+						<center><h3>Rekordna poseta prosle godine</h3></center>
+						<p>
+							Za vreme proslogodisnjeg festivala 2017. godine, nase filmove je gledalo preko 5000 ljudi.
+							Ovo je rekordna poseta u prethodnih 5 godina, ali ove godine se ocekuje jos vise gostiju.
+						</p>
+						<img src="../images/festivalimg2.jpg" alt="Vest2" width="100%">
+						
+					</div>
+					<div class="carousel-item">
+						<center><h3>Rekordna poseta prosle godine</h3></center>
+						<p>
+							Za vreme proslogodisnjeg festivala 2017. godine, nase filmove je gledalo preko 5000 ljudi.
+							Ovo je rekordna poseta u prethodnih 5 godina, ali ove godine se ocekuje jos vise gostiju.
+						</p>
+						<img src="../images/festivalimg3.jpg" alt="Vest3" width="100%">
+						
 					</div>
 				</div>
 				
+				<!-- Left and right controls -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
 				
+			</div>
+				</div>
+				
+				<div class="col-3">
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
+						</div>
+					</div>
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
+						</div>
+					</div>
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
+						</div>
+					</div>
+					<div class="card border-info">
+						<div class="card-header">
+							<div class="card-title">
+								Kratka vest
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-text">
+								Prostor za kratke vesti, recimo ko je dobio nagradu, najave filmova, itd...
+							</div>
+						</div>
+					</div>
+				</div>
 			
 			</div>
+			<div class="row">
+				<div class="col-12" style="padding-top:5%">
+					<center><img src="../images/banner.jpg" width="100%"></center>
+				</div>
+			</div>
+		
 		</div>
-		<br>
+		
+		
+		
 		<hr>
-
-
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Footer-->
+
 		<footer>
 			<div class="row" style="margin:0px;padding:5px;">
 				
@@ -149,8 +236,6 @@
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		
 		
-		
-		
 
 	
 	<!-- jQuery library -->
@@ -161,5 +246,5 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	</body>
+</body>
 </html>

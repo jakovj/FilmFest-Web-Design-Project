@@ -12,7 +12,11 @@
 .dropdown-toggle::after {
     display:none;
 }
-
+.dropdown-item:hover{
+  background-color: lightblue;
+  width:85%;
+  text-decoration: none;
+}
 .actor-card {
 	padding-top: 15px;
 }
@@ -64,12 +68,67 @@ small {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.4);
 }
-
+footer a:hover{
+  text-decoration: none;
+}
 .center {
   text-align: center;
 }
+/*hover preko sponzora*/
+.sponsor-container {
+  position: relative;
+  width: 100%;
+}
 
+.sponsor-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+.sponsor-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0059b3;
+
+}
+
+.sponsor-container:hover .sponsor-overlay {
+  opacity: 0.95;
+}
+
+.sponsor-text {
+  color: black;
+  opacity:0.7;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: none;
+}
+a.sponsor-text:hover {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: none;
+  opacity:1;
+}
 /* navbar */
 nav {
   width: 100%;
@@ -90,15 +149,16 @@ nav ul li a {
   display: block;
   padding: 0px;
   text-decoration: none;
-  color: #aaa;
+  color: white;
   font-weight: 900 ;
   text-transform: uppercase;
   margin: 0 10px;
 }
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
+nav ul li a:after {
   transition: all .5s;
+}
+nav ul li a:before {
+  transition: all 1.0s;
 }
 nav ul li a:hover {
   color: #555;
@@ -106,11 +166,61 @@ nav ul li a:hover {
 
 
 /* stroke */
-nav.stroke ul li a,
+nav.stroke ul li a{
+  position: relative;
+}
+
+nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #87CEEB;/*boja linije ispod*/
+  height: 2px;
+  opacity: 0.5;
+}
+nav.stroke ul li a:hover:after {
+  width: 70%;
+}
+
+nav.stroke ul li a.dropdown-item {
+  text-transform: lowercase;
+  transition: all 0.5s;
+}
+/*Dropdown part*/
+nav.stroke ul li a.dropdown-item.selected{
+  text-overflow: 100;
+  color:black;
+  background-color: #DCDCDC;
+  width:85%;
+  font-weight: bold;
+  opacity: 0.9;
+}
+nav.stroke ul li a.dropdown-item:after {
+  position: absolute;
+  bottom: 1;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 10%;
+  content: '.';
+  color: transparent;
+  background: #87CEEB;
+  height: 0px;
+}
+nav.stroke ul li a.dropdown-item:hover:after {
+  width: 10%;
+}
+
+/*
 nav.fill ul li a {
   position: relative;
 }
-nav.stroke ul li a:after,
+
 nav.fill ul li a:after {
   position: absolute;
   bottom: 0;
@@ -122,9 +232,6 @@ nav.fill ul li a:after {
   color: transparent;
   background: #87CEEB;
   height: 1px;
-}
-nav.stroke ul li a:hover:after {
-  width: 70%;
 }
 
 nav.fill ul li a {
@@ -149,7 +256,7 @@ nav.fill ul li a:hover:after {
   opacity: 1;
 }
 
-/* Keyframes */
+
 @-webkit-keyframes fill {
   0% {
     width: 0%;
@@ -165,3 +272,4 @@ nav.fill ul li a:hover:after {
     background: #333;
   }
 }
+*/

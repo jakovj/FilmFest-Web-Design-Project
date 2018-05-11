@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-		function change() {
-			document.location.href = "index_eng.html";
-		}
 		
-		</script>
-		<title>FF - Pocetna</title>
+		<title>FF - Filmovi</title>
 		<link rel="icon" href="../images/circle-logo.png">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
-		
+		<link rel="stylesheet" href="../css/cards-style.css" type="text/css">
+
 	</head>
 	
 	<body >
+		
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
 		<header>
@@ -52,7 +50,7 @@
 				<!-- likovi -->
 				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
 					<ul class="navbar-nav mx-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="index.html" ><h3>Pocetna</h3></a>
 						</li>
 						
@@ -68,7 +66,7 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" id="program-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="program.html"><h3>Program</h3></a>
 							<div class="dropdown-menu" aria-labelledby="program-dd">
-								 <a class="dropdown-item" href="2.1 filmovi.html">			<img src="../images/dropdown-icons/film-icon.png" width="25px">Filmovi</a>
+								 <a class="dropdown-item selected" href="2.1 filmovi.html">			<img src="../images/dropdown-icons/film-icon.png" width="25px">Filmovi</a>
 								 <a class="dropdown-item" href="2.2 mesta_projekcija.html">	<img src="../images/dropdown-icons/place-icon.png" width="25px">Mesta projekcija</a>
 								 <a class="dropdown-item" href="2.3 prodajna_mesta.html">	<img src="../images/dropdown-icons/ticket-icon.png" width="25px">Prodajna mesta</a>
 								 <a class="dropdown-item" href="2.4 prvidan.html">			<img src="../images/dropdown-icons/day1.png" width="25px">&nbsp;Dan</a>
@@ -88,33 +86,126 @@
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-		<!--Content-->
+		
 		<div class="container" style="padding-top:20px;">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="jumbotron" style="background-size:cover;background-image: url('../images/naslovna.jpg'); padding-top: 180px">
-						<div class="jumbotron" style="padding-top: 5%" >
-							<h1>Dobrodosli na zvaničan sajt film fest-a</h1><br>
-							<p>Prvi film-fest, otvoren je 9. januara 1971. u Domu Sindikata, projekcijom filma "Mes" Roberta Altmana. Zamišljen kao godisnji presek najboljih filmova sezone, filmski festival <i>film fest</i> izrastao je u jednu od najznacajnijih filmskih smotri i postao jedan od glavnih dogadjaja, uz koga su odrasle mnoge mlade generacije.
-							</p>
-							<hr>
-							<p>Na ovom sajtu mozete pronaci sve informacije vezane za sam festival, ziri, nagradama, sponzorima, kontaktu, glumcima, filmovima..
+				<div class="col-lg-12">
+						<br>
+						<h1>Filmski program</h1>
+						<hr>
+						<br>
 
-							</p>
-						</div>
-					</div>
+						<!--CARD 2.1-->
+					    <div class="example-2 card">
+					      <div class="wrapper"  style="background-image: url('../images/filmovi/film1.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+					        <div class="header">
+					          <div class="trajanje">
+					            <span>Trajanje: 122’ </span>
+					          </div>
+					          <ul class="menu-content">
+					            <li>
+					              <a href="#" class="fa fa-bookmark-o"></a>
+					            </li>
+					            <li><a href="#" class="fa fa-heart-o"><span>1</span></a></li>
+					            <li><a href="#" class="fa fa-comment-o"><span>1</span></a></li>
+					          </ul>
+					        </div>
+					        <div class="data">
+					          <div class="content">
+					            <span class="author">Dan Gilroy</span>
+					            <h1 class="title"><a href="#">Advokat</a></h1>
+					            <p class="text"> <strong> Uloge:</strong> Denzel Washington, Colin Farrell, Carmen Ejogo</p>
+					            <a href="#" class="button">Prikazi vise</a>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					    <!--CARD 2.2-->
+					    <div class="example-2 card">
+					      <div class="wrapper"  style="background-image: url('../images/filmovi/film2.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+					        <div class="header">
+					          <div class="trajanje">
+					            <span>Trajanje: 104’ </span>
+					          </div>
+					          <ul class="menu-content">
+					            <li>
+					              <a href="#" class="fa fa-bookmark-o"></a>
+					            </li>
+					            <li><a href="#" class="fa fa-heart-o"><span>1</span></a></li>
+					            <li><a href="#" class="fa fa-comment-o"><span>1</span></a></li>
+					          </ul>
+					        </div>
+					        <div class="data">
+					          <div class="content">
+					            <span class="author">Branko Schmidt</span>
+					            <h1 class="title"><a href="#">Agape</a></h1>
+					            <p class="text"> <strong> Uloge:</strong> Goran Bogdan, Pavle Čemerikić, Denis Murić, Ivo Gregurević</p>
+					            <a href="#" class="button">Prikazi vise</a>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					    <!--CARD 2.3-->
+					    <div class="example-2 card">
+					      <div class="wrapper"  style="background-image: url('../images/filmovi/film3.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+					        <div class="header">
+					          <div class="trajanje">
+					            <span>Trajanje: 107’ </span>
+					           </div>
+					          <ul class="menu-content">
+					            <li>
+					              <a href="#" class="fa fa-bookmark-o"></a>
+					            </li>
+					            <li><a href="#" class="fa fa-heart-o"><span>1</span></a></li>
+					            <li><a href="#" class="fa fa-comment-o"><span>1</span></a></li>
+					          </ul>
+					        </div>
+					        <div class="data">
+					          <div class="content">
+					            <span class="author">Andjeli nose belo</span>
+					            <h1 class="title"><a href="#">Agape</a></h1>
+					            <p class="text"> <strong> Uloge:</strong> Vicky Chen, Zhou Meijun, Shi Ke, Geng Le, Liu Weiwei, Peng Jing, Wang Yuexin, Li Mengnan</p>
+					            <a href="#" class="button">Prikazi vise</a>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					     <!--CARD 2.4-->
+					    <div class="example-2 card">
+					      <div class="wrapper"  style="background-image: url('../images/filmovi/film4.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+					        <div class="header">
+					          <div class="trajanje">
+					            <span>Trajanje: 104’ </span>
+					          </div>
+					          <ul class="menu-content">
+					            <li>
+					              <a href="#" class="fa fa-bookmark-o"></a>
+					            </li>
+					            <li><a href="#" class="fa fa-heart-o"><span>1</span></a></li>
+					            <li><a href="#" class="fa fa-comment-o"><span>1</span></a></li>
+					          </ul>
+					        </div>
+					        <div class="data">
+					          <div class="content">
+					            <span class="author">Márta Mészáros</span>
+					            <h1 class="title"><a href="#">Aurora Borealis: Severna svetlost</a></h1>
+					            <p class="text"> <strong> Uloge:</strong> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</p>
+					            <a href="#" class="button">Prikazi vise</a>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+		
 				</div>
-				
-				
-			
 			</div>
 		</div>
-		<br>
+		
+		
+		
 		<hr>
-
-
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Footer-->
+
 		<footer>
 			<div class="row" style="margin:0px;padding:5px;">
 				
@@ -149,8 +240,6 @@
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		
 		
-		
-		
 
 	
 	<!-- jQuery library -->
@@ -161,5 +250,5 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	</body>
+</body>
 </html>

@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-		function change() {
-			document.location.href = "index_eng.html";
-		}
 		
-		</script>
-		<title>FF - Pocetna</title>
+		<title>FF - Nagrade</title>
 		<link rel="icon" href="../images/circle-logo.png">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
 		
+
 	</head>
 	
 	<body >
+		
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
 		<header>
@@ -52,7 +49,7 @@
 				<!-- likovi -->
 				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
 					<ul class="navbar-nav mx-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="index.html" ><h3>Pocetna</h3></a>
 						</li>
 						
@@ -60,7 +57,7 @@
 							<a class="nav-link dropdown-toggle" id="ofestivalu-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ofestivalu.html"><h3>O festivalu</h3></a>
 							<div class="dropdown-menu" aria-labelledby="ofestivalu-dd">
 								 <a class="dropdown-item" href="1.1 ziri.html">		<img src="../images/dropdown-icons/jury-icon.png" width="25px">		Ziri</a>
-								 <a class="dropdown-item" href="1.2 nagrade.html">	<img src="../images/dropdown-icons/award-icon.png" width="25px">	Nagrade</a>
+								 <a class="dropdown-item selected" href="1.2 nagrade.html">	<img src="../images/dropdown-icons/award-icon.png" width="25px">	Nagrade</a>
 								 <a class="dropdown-item" href="1.3 sponzori.html">	<img src="../images/dropdown-icons/sponsor-icon.png" width="25px">	Sponzori</a>
 								 <a class="dropdown-item" href="1.4 kontakt.html">	<img src="../images/dropdown-icons/contact-icon.png" width="25px">	Kontakt</a>
 							</div>
@@ -87,34 +84,82 @@
 			</nav>
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-
-		<!--Content-->
 		<div class="container" style="padding-top:20px;">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="jumbotron" style="background-size:cover;background-image: url('../images/naslovna.jpg'); padding-top: 180px">
-						<div class="jumbotron" style="padding-top: 5%" >
-							<h1>Dobrodosli na zvaničan sajt film fest-a</h1><br>
-							<p>Prvi film-fest, otvoren je 9. januara 1971. u Domu Sindikata, projekcijom filma "Mes" Roberta Altmana. Zamišljen kao godisnji presek najboljih filmova sezone, filmski festival <i>film fest</i> izrastao je u jednu od najznacajnijih filmskih smotri i postao jedan od glavnih dogadjaja, uz koga su odrasle mnoge mlade generacije.
-							</p>
-							<hr>
-							<p>Na ovom sajtu mozete pronaci sve informacije vezane za sam festival, ziri, nagradama, sponzorima, kontaktu, glumcima, filmovima..
+				<div class="col-sm-12">
+					<div class="jumbotron">
+						<h1>Nagrade film fest-a</h1>
+						<hr>
+						<br>
+						<div class="container-fluid">
+							<div class="row">
+							  <div class="col-4">
+							    <div class="list-group" id="list-tab" role="tablist">
+							      <a class="list-group-item list-group-item-action active" id="list-1-list" data-toggle="list" href="#list-1" role="tab" aria-controls="1">Međunarodni takmičarski program</a>
+							      <a class="list-group-item list-group-item-action" id="list-2-list" data-toggle="list" href="#list-2" role="tab" aria-controls="2">Nacionalni takmičarski program</a>
+							      <a class="list-group-item list-group-item-action" id="list-3-list" data-toggle="list" href="#list-3" role="tab" aria-controls="3">Subverzivni,kontroverzni i umetnički filmovi</a>
+							      <a class="list-group-item list-group-item-action" id="list-4-list" data-toggle="list" href="#list-4" role="tab" aria-controls="4">Politikina nagrada</a>
+							    </div>
+							  </div>
+							  <div class="col-8">
 
-							</p>
+							    <div class="tab-content" id="nav-tabContent">
+							      <div class="tab-pane fade show active" id="list-1" role="tabpanel" aria-labelledby="list-1-list">
+							      	<ul class="list-group">
+									  <li class="list-group-item">Nagrada „Beogradski pobednik“ za najbolji film - dodeljuje se producentu </li>
+									  <li class="list-group-item">Specijalna Nagrada žirija </li>
+									  <li class="list-group-item">Nagrada za najbolju režiju</li>
+									  <li class="list-group-item">Nagrada za najbolju žensku ulogu</li>
+									  <li class="list-group-item">Nagrada za najbolju mušku ulogu</li>
+									  <li class="list-group-item">Nagrada za najbolji scenario</li>
+									  <li class="list-group-item">Nagrada za najbolji debi </li>
+									</ul>
+							      </div>
+
+							      <div class="tab-pane fade" id="list-2" role="tabpanel" aria-labelledby="list-2-list">
+							      	<ul class="list-group">
+									  <li class="list-group-item">Nagrada „Beogradski pobednik“ za najbolji film - dodeljuje se producentu </li>
+									  <li class="list-group-item">Nagrada žirija </li>
+									  <li class="list-group-item">Nagrada za najbolju režiju</li>
+									  <li class="list-group-item">Nagrada za najbolju žensku ulogu</li>
+									  <li class="list-group-item">Nagrada za najbolju mušku ulogu</li>
+									  <li class="list-group-item">Nagrada za najbolji scenario</li>
+									  <li class="list-group-item">Nagrada za najbolji debi </li>
+									</ul>
+							      </div>
+
+							      <div class="tab-pane fade" id="list-3" role="tabpanel" aria-labelledby="list-3-list">
+							      	<ul class="list-group">
+									  <li class="list-group-item">Nagrada za najbolji film - reditelju</li>
+									  <li class="list-group-item">Specijalno priznanje za najbolji igrani film iz ovog programa </li>
+									</ul>
+								  </div>
+
+							      <div class="tab-pane fade" id="list-4" role="tabpanel" aria-labelledby="list-4-list">
+							      	<ul class="list-group">
+									  <li class="list-group-item">Nagrada zirija filmskih kriticara „Nebojsa Đukelić“</li>
+									  <li class="list-group-item">Fond „Nebojša Đukelić“ dodeljuje nagradu za najbolji film regiona: NAGRADE ŽIRIJA „FEDEORA“ </li>
+									  <li class="list-group-item">Diplomu i statuu ''Most wanted GORKI LIST movie award'', FESTOVE NAGRADE</li>
+									  <li class="list-group-item">Priznanja za izizetan doprinos filmskoj umetnosti kao i za dosadasnje stvaralastvo</li>
+									</ul>
+							      </div>
+
+							    </div>
+							  </div>
+							</div>
 						</div>
 					</div>
 				</div>
 				
 				
-			
 			</div>
 		</div>
-		<br>
+		
+		
 		<hr>
-
-
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Footer-->
+
 		<footer>
 			<div class="row" style="margin:0px;padding:5px;">
 				
@@ -149,8 +194,6 @@
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		
 		
-		
-		
 
 	
 	<!-- jQuery library -->
@@ -161,5 +204,5 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	</body>
+</body>
 </html>
