@@ -13,7 +13,7 @@
 
 	</head>
 	
-	<body >
+	<body onLoad="prikaziFilmove()">
 		
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
@@ -92,6 +92,13 @@
 						<br>
 						<h1>Filmski program</h1>
 						<hr>
+						<div id="myBtnContainer">
+						  <p>Sortiraj po
+						  <button class="btn btn-sm active" onclick="filterSelection('1')"> po nazivu filma</button>
+						  <button class="btn btn-sm" onclick="filterSelection('2')"> po mestu projekcije</button>
+						  <button class="btn btn-sm" onclick="filterSelection('3')"> po broju rezervacija</button>
+						  </p>
+						</div>
 						<br>
 				</div>
 				<div class="col-12 col-md-6">
