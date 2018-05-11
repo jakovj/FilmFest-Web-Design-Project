@@ -141,6 +141,20 @@ a.sponsor-text:hover {
   opacity:1;
 }
 /* navbar */
+#glavni_naslov{
+  font-family:'Monoton', Helvetica;
+  font-size:40pt;
+  margin:0;
+  font-weight: 100;
+  color:white;
+}
+#glavni_datum{
+  font-family: 'Kaushan Script', sans-serif;
+  font-size:24pt;
+  margin:0;
+  font-weight: 100;
+  color:white;
+}
 nav {
   width: 100%;
   margin: 0 auto;
@@ -157,18 +171,22 @@ nav ul li {
   display: inline-block;
 }
 nav ul li a {
+  font-family: 'Contrail One', sans-serif;
+  font-size:18pt;
   font-style: none;
   display: block;
   padding: 0px;
   text-decoration: none;
   color: white;
-  font-weight: 100;
-  text-transform: uppercase;
+  font-weight: 100 !important;
+  
   margin: 0 10px;
 }
-nav div ul li a.nav-link {
-  font-size:10pt !important;
+nav ul li a.dropdown-item {
+    font-size:12pt;
+      font-weight: 100 !important;
 }
+
 nav ul li a:after {
   transition: all .5s;
 }
