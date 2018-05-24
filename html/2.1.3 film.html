@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-		function change() {
-			document.location.href = "index_eng.html";
-		}
-		
-		</script>
 		<title>FF - Advokat</title>
 		<link rel="icon" href="../images/circle-logo.png">
+
+		<script src="../js/main.js"></script>
+
 		<link href="https://fonts.googleapis.com/css?family=Contrail+One|Damion|Dancing+Script|Fredoka+One|Fugaz+One|Kaushan+Script|Monoton|Pacifico|Righteous|Titan+One" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +13,7 @@
 		<link rel="stylesheet" href="../lightbox2-master/dist/css/lightbox.min.css">
 	</head>
 	
-	<body ><!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<body onLoad="refreshFilm('film_3_Advokat')"><!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
 		<header>
 			<div class="row" style="background-image: url('../images/back2.jpg');background-size:cover;width:100%;margin:0px;">
@@ -111,7 +108,7 @@
 							  </div>
 						  </form>
 						  <br>
-						  <p>Broj rezervacija: <span id="br_rezervacija"> 5 </span></p>            
+						 <p>Broj rezervacija: <font color="orange"><span id="br_rezervacija"> x </span> </font></p>            
 						  <table class="table table-bordered">
 						    <tbody>
 						      <tr>
@@ -177,7 +174,7 @@
 			</div>
 			<hr>
 			<div class="row">
-					<div class="col-12">
+					<div class="col-12"  id="rezervisi">
 						<h2>Rezerviši kartu:</h2>
 					</div>
 					
@@ -186,30 +183,31 @@
 								<table>
 									<tr class="rezervacija-col">
 										<td>Ime &nbsp;</td>
-										<td><input type="text" class="form-control" placeholder="Ime"></td>
+										<td><input type="text" class="form-control" placeholder="Ime" id="ime"></td>
 									</tr>
 									<tr class="rezervacija-col">
 										<td>Prezime &nbsp;</td>
-										<td><input type="text" class="form-control" placeholder="Prezime"></td>
+										<td><input type="text" class="form-control" placeholder="Prezime" id="prezime"></td>
 									</tr>
 									<tr class="rezervacija-col">
 										<td>E-mail &nbsp;</td>
-										<td><input type="email" class="form-control" placeholder="example@gmail.com"></td>
+										<td><input type="email" class="form-control" placeholder="example@gmail.com"  id="email"></td>
 									</tr>
 									<tr class="rezervacija-col">
 										<td>Broj telefona &nbsp;</td>
-										<td><input type="text" class="form-control" placeholder="xxx - xxx - xxx"></td>
+										<td><input type="text" class="form-control" placeholder="xxx - xxx - xxx" id="telefon"></td>
 									</tr>
 									<tr class="rezervacija-col">
 										<td>Projekcija &nbsp;</td>
-										<td><input type="text" class="form-control" placeholder="#"></td>
+										<td><input type="text" class="form-control" placeholder="#" id="projekcija"></td>
 									</tr>
 									<tr class="rezervacija-col">
 										<td>Broj karata &nbsp;</td>
-										<td><input type="text" class="form-control" placeholder="0"></td>
+										<td><input type="text" class="form-control" placeholder="0" id="br_karata"></td>
 									</tr>
 									<tr class="rezervacija-col">
-										<td colspan="2"><br><center><a href="mailto:rezervacija@filmfest.rs"><input type="button" class="btn btn-secondary-outline" value="Rezervisi" onClick=""></a></center></td>
+										<td colspan="2"><br><center><input type="button" class="btn btn-secondary-outline" value="Rezervisi" onClick="rezervisi('film_3_Advokat','2')"></center></td>
+
 									</tr>
 								</table>
 								
