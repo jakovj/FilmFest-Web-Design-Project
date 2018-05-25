@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="../lightbox2-master/dist/css/lightbox.min.css">
 	</head>
 	
-	<body onLoad="refreshFilm('film_6_Fantomska nit')"><!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<body onLoad="refreshFilm('brrezervacija_film_6_Fantomska nit')"><!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
 		<header>
 			<div class="row" style="background-image: url('../images/back2.jpg');background-size:cover;width:100%;margin:0px;">
@@ -102,8 +102,8 @@
 						  <h1>Fantomska nit</h1>
 						  <form name="forma_mojifilmovi">
 							  <div class="btn-group-toggle" data-toggle="buttons">
-								  <label class="btn btn-warning btn-sm active">
-								    <input type="checkbox" checked autocomplete="off" onClick="dodajFilm()"><span style="color:white"> Dodaj u "Moje filmove"</span>
+								  <label class="btn btn-warning btn-sm active" onClick="dodajOmiljeni('omiljeni_film_6_Fantomska nit')">
+								    <input type="checkbox" checked autocomplete="off" onClick="dodajOmiljeni('omiljeni_film_6_Fantomska nit')"><span style="color:white"> Dodaj u "Moje filmove"</span>
 								  </label>
 							  </div>
 						  </form>
@@ -211,7 +211,7 @@
 										<td><input type="text" class="form-control" placeholder="0" id="br_karata"></td>
 									</tr>
 									<tr class="rezervacija-col">
-										<td colspan="2"><br><center><input type="button" class="btn btn-secondary-outline" value="Rezervisi" onClick="rezervisi('film_6_Fantomska nit','2')"></center></td>
+										<td colspan="2"><br><center><input type="button" class="btn btn-secondary-outline" value="Rezervisi" onClick="rezervisi('brrezervacija_film_6_Fantomska nit','2')"></center></td>
 									</tr>
 								</table>
 								

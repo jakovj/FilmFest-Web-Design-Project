@@ -4,7 +4,10 @@
 		
 		<title>FF - Moji filmovi</title>
 		<link rel="icon" href="../images/circle-logo.png">
-<link href="https://fonts.googleapis.com/css?family=Contrail+One|Damion|Dancing+Script|Fredoka+One|Fugaz+One|Kaushan+Script|Monoton|Pacifico|Righteous|Titan+One" rel="stylesheet">
+
+		<script src="../js/main.js"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Contrail+One|Damion|Dancing+Script|Fredoka+One|Fugaz+One|Kaushan+Script|Monoton|Pacifico|Righteous|Titan+One" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -13,7 +16,7 @@
 
 	</head>
 	
-	<body >
+	<body onLoad="mojifilmovi_onload()">
 		
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Header-->
@@ -93,14 +96,23 @@
 						<br>
 						<h1>Moji filmovi</h1>
 						<hr>
-							<input type="button" class="btn btn-danger" value="Obrisi sve" onClick="obrisiOmiljenje()">
-						<br><br>
+						<div id="myBtnContainer">
+						  <p>Sortiraj po
+						  <button class="btn btn-sm active" onclick="filterMojiFilmovi('1')"> po nazivu filma</button>
+						  <button class="btn btn-sm" onclick="filterMojiFilmovi('2')"> po mestu projekcije</button>
+						  <button class="btn btn-sm" onclick="filterMojiFilmovi('3')"> po broju rezervacija</button>
+						  </p>
+						</div>
+						<br>
 				</div>
-				<div class="col-12 col-md-6">
-					<span id="prikaz_mojih_filmova">Niste izabrali ni jedan film</span>
+					<span id="prikaz_mojih_filmova"></span>
+				<div class="col-12">
+					<br>
+					<br>
+					<hr>
+					<input type="button" class="btn btn-danger btn-sm" value="Obrisi sve" onClick="clearLocalStorage()">
+					<br><br>
 				</div>
-				<br>
-				<br>
 			</div>
 		</div>
 		
