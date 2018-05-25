@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<title>FF - Prodajna mesta</title>
+		<link rel="icon" href="../images/circle-logo.png">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/styles.css" type="text/css">
+		
+
+	</head>
+	
+	<body >
+		
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--Header-->
+		<header>
+			<div class="row" style="background-image: url('../images/back2.jpg');background-size:cover;width:100%;margin:0px;">
+				<div class="col-lg-12">
+					<div class="float-right" style="padding:1%;">
+							<a href="index.html"><img src="../images/srb.png" width="50px" height="30px;"></a>
+							<a href="index_eng.html"><img src="../images/eng.png" width="50px" height="30px;"  ></a>
+					</div>
+				</div>
+				<div class="col-4 col-lg-2">
+					<img src="../images/festival-logo.png" alt="LOGO" width="100%" style="padding:10%;">
+				</div>
+				<div class="col-8 col-lg-10">
+					<br>
+					<h1 style="color:white; ">Filmski festival</h1>
+					<h3 style="color:white; " >1.6-2.6</h3>
+				</div>
+		</header>		
+				
+				
+		<!--Navbar-->		
+			</div>
+			<nav class="stroke navbar navbar-expand-md navbar-dark" style="background-image: url('../images/pattern.png');" >
+				<!-- logo -->
+				<a class="navbar-brand ml-4" href="index.html"><img src="../images/circle-logo.png" alt="LOGO" style="width:50px;"></a>
+				
+				<!-- kada se smanji prozor da se pojavi collapse button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<!-- likovi -->
+				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item">
+							<a class="nav-link a-link" href="index.html" ><h3>Početna</h3></a>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="ofestivalu-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ofestivalu.html"><h3>O festivalu</h3></a>
+							<div class="dropdown-menu" aria-labelledby="ofestivalu-dd">
+								 <a class="dropdown-item" href="1.1 ziri.html">		<img src="../images/dropdown-icons/jury-icon.png" width="25px">		Ziri</a>
+								 <a class="dropdown-item" href="1.2 nagrade.html">	<img src="../images/dropdown-icons/award-icon.png" width="25px">	Nagrade</a>
+								 <a class="dropdown-item" href="1.3 sponzori.html">	<img src="../images/dropdown-icons/sponsor-icon.png" width="25px">	Sponzori</a>
+								 <a class="dropdown-item" href="1.4 kontakt.html">	<img src="../images/dropdown-icons/contact-icon.png" width="25px">	Kontakt</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="program-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="program.html"><h3>Program</h3></a>
+							<div class="dropdown-menu" aria-labelledby="program-dd">
+								 <a class="dropdown-item" href="2.1 filmovi.html">		<img src="../images/dropdown-icons/film-icon.png" width="25px">Filmovi</a>
+								 <a class="dropdown-item" href="2.2 mesta_projekcija.html">		<img src="../images/dropdown-icons/place-icon.png" width="25px">Mesta projekcija</a>
+								 <a class="dropdown-item selected" href="2.3 prodajna_mesta.html">		<img src="../images/dropdown-icons/ticket-icon.png" width="25px">Prodajna mesta</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="3 glumci.html"><h3>Glumci</h3></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="4 vesti.html"><h3>Vesti</h3></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="5 mojifilmovi.html"><h3>Moji filmovi</h3></a>
+						</li>
+					</ul>
+				</div> 
+			</nav>
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+		<div class="container" style="padding-top:20px;">
+			<div class="row">
+				<div class="col-12">
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item">Program</li>
+						<li class="breadcrumb-item">Prodajna mesta<li>
+						
+					</ul>
+				</div>
+				<div class="col-sm-8">					
+					<div id="map" style="width:100%;height:100%;"></div>
+					<script>
+						
+						function initMap() {
+				        var myLatLng = {lat: 44.815536567747884, lng: 20.462941171433727};
+
+				        var map = new google.maps.Map(document.getElementById('map'), {
+				          zoom: 13,
+				          center: myLatLng
+				        });
+
+				        var marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Dom Omladine'
+				        });
+						myLatLng = {lat: 44.808701648309146, lng: 20.43288970163087};
+						marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Sava Centar'
+				        });
+						myLatLng = {lat: 44.81412093825238, lng: 20.421560050751964};
+						marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Eventim'
+				        });
+				      }
+						
+					</script>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap"></script>
+
+				</div>
+
+				<div class="col-md-4">
+
+					<div class="jumbotron" style="padding:20px;padding-left:20px;padding-right:20px;background-size:cover; background-image: url('./img/brown-gradient.png');">
+						<h3>Sava centar</h3>
+						<hr>
+						Milentija Popovica 9, Beograd<br>
+						<a href="http://www.savacentar.net">savacentar.net</a><br>
+						10:00 - 18:00
+						<br>
+						<h5></h5>
+					</div>
+					<div class="jumbotron" style="padding:20px;padding-left:20px;padding-right:20px;background-size:cover; background-image: url('./img/brown-gradient.png');">
+						<h3>Dom omladine</h3>
+						<hr>
+						Makedonska 22, Beograd<br>
+						<a href="http://www.domomladine.org">domomladine.org</a><br>
+						12:00 - 20:00
+						<br>
+						<h5></h5>
+					</div>
+					<div class="jumbotron" style="padding:20px;padding-left:20px;padding-right:20px;background-size:cover; background-image: url('./img/brown-gradient.png');">
+						<h3>Eventim</h3>
+						<hr>
+						Bulevar Arsenija Carnojevica 58, Beograd<br>
+						<a href="http://www.eventim.rs/rs/">eventim.rs</a><br>
+						10:00 - 18:00
+						<br>
+						<h5></h5>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--Footer-->
+
+		<footer>
+			<div class="row" style="margin:0px;padding:5px;">
+				
+				<div class="col-4" style="padding:10px">
+						<a href="https://sr-rs.facebook.com/">
+							<img src="../images/social-icons/fb-icon.png" style="max-width: 8%;min-width:25px;"/>
+						</a>
+						&nbsp;
+						<a href="https://www.youtube.com/">
+							<img src="../images/social-icons/yt-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="https://www.instagram.com/">
+							<img src="../images/social-icons/ig-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="https://www.twitter.com/">
+							<img src="../images/social-icons/tw-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="mailto:hm150112d@student.etf.bg.ac.rs?Subject=film%20fest">
+							<img src="../images/social-icons/em-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+				</div>
+				<div class="col-8" align="right" style="padding:5px">
+					<i>
+						&copy; Copyright 2018.<br>
+						Jakov Jezdic i Marko Hudomal, Odsek za Softversko inzenjerstvo Elektrotehnickog fakulteta univerziteta u Beogradu
+					<i>
+				</div>				
+		</footer>	
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
