@@ -1,4 +1,5 @@
 
+
 .film-description {
 	font-size:calc(12px + 0.3vw);
 }
@@ -195,6 +196,13 @@ nav ul li a:before {
 }
 nav ul li a:hover {
   color: #555;
+}
+
+.sortable-link:hover {
+	color: gray;
+}
+.sortable-link {
+	color: black;
 }
 
 
