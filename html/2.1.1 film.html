@@ -177,11 +177,9 @@
 			</div>
 			<hr>
 			<div class="row">
-					<div class="col-12" id="rezervisi">
-						<h2>Rezerviši kartu:</h2>
-					</div>
 					
-					<div class="col-12 col-md-12">
+					<div class="col-6 col-md-6" id="rezervisi">
+							<h2>Rezerviši kartu:</h2>
 							<form name="rezervacija">
 								<table>
 									<tr class="rezervacija-col">
@@ -216,6 +214,30 @@
 							</form>
 						
 					</div>	
+					<div class="col-6">
+						<div id="map" style="width:100%;height:100%;"></div>
+						<script>
+						
+						function initMap() {
+				        var myLatLng = {lat: 44.815536567747884, lng: 20.462941171433727};
+
+				        var map = new google.maps.Map(document.getElementById('map'), {
+				          zoom: 13,
+				          center: myLatLng
+				        });
+
+						myLatLng = {lat: 44.808701648309146, lng: 20.43288970163087};
+						marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Sava Centar'
+				        });
+				      }
+						
+						</script>
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap"></script>
+					</div>
+					
 			</div>
 			<hr>
 			<div class="row">

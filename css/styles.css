@@ -1,4 +1,16 @@
 
+.kratka-vest {
+
+	padding-top:2px;
+	
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color:#FFE898;
+  border: 0px;
+  color: black;
+}
+
 .film-description {
 	font-size:calc(12px + 0.3vw);
 }
@@ -195,6 +207,13 @@ nav ul li a:before {
 }
 nav ul li a:hover {
   color: #555;
+}
+
+.sortable-link:hover {
+	color: gray;
+}
+.sortable-link {
+	color: black;
 }
 
 

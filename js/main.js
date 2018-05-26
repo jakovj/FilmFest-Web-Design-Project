@@ -59,13 +59,24 @@ function refreshFilm(film)
 }
 function refreshRezervacije()
 {
-
-	document.getElementById("film_rez_1").innerHTML=localStorage.getItem("brrezervacija_film_1_Skver")?localStorage.getItem("brrezervacija_film_1_Skver"):0;
-	document.getElementById("film_rez_2").innerHTML=localStorage.getItem("brrezervacija_film_2_Tri Bilborda ispred Ebinga u Misuriju")?localStorage.getItem("brrezervacija_film_2_Tri Bilborda ispred Ebinga u Misuriju"):0;
-	document.getElementById("film_rez_3").innerHTML=localStorage.getItem("brrezervacija_film_3_Advokat")?localStorage.getItem("brrezervacija_film_3_Advokat"):0;
-	document.getElementById("film_rez_4").innerHTML=localStorage.getItem("brrezervacija_film_4_Aurora Borealis: Severna svetlost")?localStorage.getItem("brrezervacija_film_4_Aurora Borealis: Severna svetlost"):0;
-	document.getElementById("film_rez_5").innerHTML=localStorage.getItem("brrezervacija_film_5_Oblik vode")?localStorage.getItem("brrezervacija_film_5_Oblik vode"):0;
-	document.getElementById("film_rez_6").innerHTML=localStorage.getItem("brrezervacija_film_6_Fantomska nit")?localStorage.getItem("brrezervacija_film_6_Fantomska nit"):0;
+	if (document.getElementById("film_rez_1") != null) {
+		document.getElementById("film_rez_1").innerHTML=localStorage.getItem("brrezervacija_film_1_Skver")?localStorage.getItem("brrezervacija_film_1_Skver"):0;
+	}
+	if (document.getElementById("film_rez_2") != null) {
+		document.getElementById("film_rez_2").innerHTML=localStorage.getItem("brrezervacija_film_2_Tri Bilborda ispred Ebinga u Misuriju")?localStorage.getItem("brrezervacija_film_2_Tri Bilborda ispred Ebinga u Misuriju"):0;
+	}
+	if (document.getElementById("film_rez_3") != null) {
+		document.getElementById("film_rez_3").innerHTML=localStorage.getItem("brrezervacija_film_3_Advokat")?localStorage.getItem("brrezervacija_film_3_Advokat"):0;
+	}
+	if (document.getElementById("film_rez_4") != null) {
+		document.getElementById("film_rez_4").innerHTML=localStorage.getItem("brrezervacija_film_4_Aurora Borealis: Severna svetlost")?localStorage.getItem("brrezervacija_film_4_Aurora Borealis: Severna svetlost"):0;
+	}
+	if (document.getElementById("film_rez_5") != null) {
+		document.getElementById("film_rez_5").innerHTML=localStorage.getItem("brrezervacija_film_5_Oblik vode")?localStorage.getItem("brrezervacija_film_5_Oblik vode"):0;
+	}
+	if (document.getElementById("film_rez_6") != null) {
+		document.getElementById("film_rez_6").innerHTML=localStorage.getItem("brrezervacija_film_6_Fantomska nit")?localStorage.getItem("brrezervacija_film_6_Fantomska nit"):0;
+	}
 }
 function provera_rezervacije(ime,prezime,email,telefon,projekcija,max_projekcija,br_karata)
 {		
@@ -335,4 +346,180 @@ function filterMojiFilmovi(filter)
 	arr.sort();
 	document.getElementById("prikaz_mojih_filmova").innerHTML=arr;
 	*/
+}
+
+
+function sortirajPoNazivu() {
+	
+	var parent = document.getElementById("movies");
+	var children = parent.getElementsByTagName("div");
+	var ids = [], obj, i, len;
+	for (i = 0, len = children.length; i < len; i++) {
+		obj = {};
+		obj.element = children[i];
+		obj.id = children[i].id;
+		ids.push(obj);
+	}
+	ids.sort(function(a, b) {return a.id > b.id;});
+	 for (i = 0; i < ids.length; i++) {
+		 parent.appendChild(ids[i].element);
+	 }
+}
+
+function sortirajPoRez() {
+	
+	var parent = document.getElementById("movies");
+	var children = parent.getElementsByTagName("div");
+	var ids = [], obj, i, len;
+	for (i = 0, len = children.length; i < len; i++) {
+		obj = {};
+		obj.element = children[i];
+		obj.id = parseInt(dohvatiBrRezervacija(children[i].id));
+		ids.push(obj);
+	}
+	ids.sort(function(a, b) {return b.id - a.id;});
+	 for (i = 0; i < ids.length; i++) {
+		 parent.appendChild(ids[i].element);
+	 }
+	
+}
+
+function sortirajPoMestu() {
+	
+	var film_mestoProj = {};
+	film_mestoProj["Skver"] = "Sava Centar";
+	film_mestoProj["Tri Bilborda ispred Ebinga u Misuriju"] = "Dom Omladine";
+	film_mestoProj["Advokat"] = "Sava Centar";
+	film_mestoProj["Aurora Borealis: Severna svetlost"] = "Sava Centar";
+	film_mestoProj["Oblik vode"] = "Sava Centar";
+	film_mestoProj["Fantomska nit"] = "Dom Omladine";
+	var parent = document.getElementById("movies");
+	var children = parent.getElementsByTagName("div");
+	var ids = [], obj, i, len;
+	for (i = 0, len = children.length; i < len; i++) {
+		obj = {};
+		obj.element = children[i];
+		obj.id = film_mestoProj[children[i].id];
+		ids.push(obj);
+	}
+	ids.sort(function(a, b) {return a.id > b.id;});
+	 for (i = 0; i < ids.length; i++) {
+		 parent.appendChild(ids[i].element);
+	 }
+}
+
+function sortirajOmiljenePoMestu()
+{
+	var ima=false;
+	var film_mestoProj = {};
+	film_mestoProj["Skver"] = "Sava Centar";
+	film_mestoProj["Tri Bilborda ispred Ebinga u Misuriju"] = "Dom Omladine";
+	film_mestoProj["Advokat"] = "Sava Centar";
+	film_mestoProj["Aurora Borealis: Severna svetlost"] = "Sava Centar";
+	film_mestoProj["Oblik vode"] = "Sava Centar";
+	film_mestoProj["Fantomska nit"] = "Dom Omladine";
+	document.getElementById("prikaz_mojih_filmova").innerHTML="";
+	var ids = [], obj, i, len;
+	for (i = 0; i < localStorage.length; i++) {
+			key = localStorage.key(i);
+			var arr=key.split('_');
+			if (arr[0]=="omiljeni")
+			{
+				var film=arr[1]+"_"+arr[2];
+				obj = {};
+				obj.element = localStorage.getItem(film);
+				obj.id = film_mestoProj[arr[3]];
+				ima=true;
+				ids.push(obj);
+			}
+		}
+	if (ima==false)
+	{
+		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+	}
+	else {
+		ids.sort(function(a, b) {return a.id > b.id;});
+		for (i = 0; i < ids.length; i++) {
+			document.getElementById("prikaz_mojih_filmova").innerHTML+=ids[i].element;
+		}
+		refreshRezervacije();
+	}
+}
+
+function sortirajOmiljenePoNazivu()
+{
+	var ima=false;
+	document.getElementById("prikaz_mojih_filmova").innerHTML="";
+	var ids = [], obj, i, len;
+	for (i = 0; i < localStorage.length; i++) {
+			key = localStorage.key(i);
+			var arr=key.split('_');
+			if (arr[0]=="omiljeni")
+			{
+				var film=arr[1]+"_"+arr[2];
+				obj = {};
+				obj.element = localStorage.getItem(film);
+				obj.id = arr[3];
+				ima=true;
+				ids.push(obj);
+				//document.getElementById("prikaz_mojih_filmova").innerHTML+=localStorage.getItem(film);
+			}
+		}
+	if (ima==false)
+	{
+		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+	}
+	else {
+		ids.sort(function(a, b) {return a.id > b.id;});
+		for (i = 0; i < ids.length; i++) {
+			document.getElementById("prikaz_mojih_filmova").innerHTML+=ids[i].element;
+		}
+		refreshRezervacije();
+	}
+}
+
+function sortirajOmiljenePoBrRez()
+{
+	var ima=false;
+	document.getElementById("prikaz_mojih_filmova").innerHTML="";
+	var ids = [], obj, i, len;
+	for (i = 0; i < localStorage.length; i++) {
+			key = localStorage.key(i);
+			var arr=key.split('_');
+			if (arr[0]=="omiljeni")
+			{
+				var film=arr[1]+"_"+arr[2];
+				obj = {};
+				obj.element = localStorage.getItem(film);
+				obj.id = parseInt(dohvatiBrRezervacija(arr[3]));
+				ima=true;
+				ids.push(obj);
+			}
+		}
+	if (ima==false)
+	{
+		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+	}
+	else {
+		ids.sort(function(a, b) {return b.id - a.id;});
+		for (i = 0; i < ids.length; i++) {
+			document.getElementById("prikaz_mojih_filmova").innerHTML+=ids[i].element;
+		}
+		refreshRezervacije();
+	}
+}
+
+function dohvatiBrRezervacija(id_filma) {
+	
+	for (i = 0; i < localStorage.length; i++) {
+			key = localStorage.key(i);
+			var arr=key.split('_');
+			
+			if (arr[0] == "brrezervacija" && arr[3] == id_filma)
+			{
+				return localStorage.getItem(key);
+			}
+		}
+	return 0;
+	
 }
