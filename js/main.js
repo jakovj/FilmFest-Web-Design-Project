@@ -356,7 +356,7 @@ function loadMovies()
 										  <div class=\"media-body\">\
 											<h3 class=\"mt-0\"><a class=\"ziri-link\">The Square</a></h3>\
 											<hr>\
-											<a href=\"2.1.1 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<a href=\"2.1.1 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_1\">0</span></font><br><br>\
 											<p>Duration:<i> 142'</i></p>\
@@ -377,7 +377,7 @@ function loadMovies()
 										  <div class=\"media-body\">\
 											<h3 class=\"mt-0\"><a class=\"ziri-link\">Three Billboards outside Ebbing, Missouri</a></h3>\
 											<hr>\
-											<a href=\"2.1.2 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<a href=\"2.1.2 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_2\">0</span></font><br><br>\
 											<p>Duration:<i> 115'</i></p>\
@@ -398,7 +398,7 @@ function loadMovies()
 										  <div class=\"media-body\">\
 											<h3 class=\"mt-0\"><a class=\"ziri-link\">Roman J. Israel, Esq.</a></h3>\
 											<hr>\
-											<a href=\"2.1.3 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<a href=\"2.1.3 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_3\">0</span></font><br><br>\
 											<p>Duration:<i> 122'</i></p>\
@@ -419,7 +419,7 @@ function loadMovies()
 										  <div class=\"media-body\">\
 											<h3 class=\"mt-0\"><a class=\"ziri-link\">Aurora Borealis: Northern lights</a></h3>\
 											<hr>\
-											<a href=\"2.1.4 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<a href=\"2.1.4 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_4\">0</span></font><br><br>\
 											<p>Duration:<i> 104'</i></p>\
@@ -440,7 +440,7 @@ function loadMovies()
 										  <div class=\"media-body\">\
 											<h3 class=\"mt-0\"><a class=\"ziri-link\">The Shape of Water</a></h3>\
 											<hr>\
-											<a href=\"2.1.5 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<a href=\"2.1.5 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_5\">0</span></font><br><br>\
 											<p>Duration:<i>123'</i></p>\
@@ -461,7 +461,7 @@ function loadMovies()
 										  <div class=\"media-body\">\
 											<h3 class=\"mt-0\"><a class=\"ziri-link\">Phantom Thread</a></h3>\
 											<hr>\
-											<a href=\"2.1.6 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<a href=\"2.1.6 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_6\">0</span></font><br><br>\
 											<p>Duration:<i>115'</i></p>\
