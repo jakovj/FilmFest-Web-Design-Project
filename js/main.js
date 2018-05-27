@@ -219,9 +219,9 @@ function loadFilmovi()
 											<a href=\"2.1.1 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_1\">0</span></font><br><br>\
-											<p>Duration:<i> 142'</i></p>\
-											<p>Director:<i> Ruben Östlund</i></p>\
-											<p>Cast:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
+											<p>Trajanje:<i> 142'</i></p>\
+											<p>Režija:<i> Ruben Östlund</i></p>\
+											<p>Uloge:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -240,9 +240,9 @@ function loadFilmovi()
 											<a href=\"2.1.2 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_2\">0</span></font><br><br>\
-											<p>Duration:<i> 115'</i></p>\
-											<p>Director:<i> Martin McDonagh</i></p>\
-											<p>Cast:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
+											<p>Trajanje:<i> 115'</i></p>\
+											<p>Režija:<i> Martin McDonagh</i></p>\
+											<p>Uloge:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -261,9 +261,9 @@ function loadFilmovi()
 											<a href=\"2.1.3 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_3\">0</span></font><br><br>\
-											<p>Duration:<i> 122'</i></p>\
-											<p>Director:<i> Dan Gilroy</i></p>\
-											<p>Cast:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
+											<p>Trajanje:<i> 122'</i></p>\
+											<p>Režija:<i> Dan Gilroy</i></p>\
+											<p>Uloge:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -282,9 +282,9 @@ function loadFilmovi()
 											<a href=\"2.1.4 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_4\">0</span></font><br><br>\
-											<p>Duration:<i> 104'</i></p>\
-											<p>Director:<i> Márta Mészáros</i></p>\
-											<p>Cast:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
+											<p>Trajanje:<i> 104'</i></p>\
+											<p>Režija:<i> Márta Mészáros</i></p>\
+											<p>Uloge:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -303,9 +303,9 @@ function loadFilmovi()
 											<a href=\"2.1.5 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_5\">0</span></font><br><br>\
-											<p>Duration:<i>123'</i></p>\
-											<p>Director:<i> Guillermo del Toro</i></p>\
-											<p>Cast:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
+											<p>Trajanje:<i>123'</i></p>\
+											<p>Režija:<i> Guillermo del Toro</i></p>\
+											<p>Uloge:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -324,9 +324,9 @@ function loadFilmovi()
 											<a href=\"2.1.6 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_6\">0</span></font><br><br>\
-											<p>Duration:<i>115'</i></p>\
-											<p>Director:<i> Paul Thomas Anderson</i></p>\
-											<p>Cast:<i> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</i></p>\
+											<p>Trajanje:<i>115'</i></p>\
+											<p>Režija:<i> Paul Thomas Anderson</i></p>\
+											<p>Uloge:<i> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</i></p>\
 										  </div>\
 										</div>\
 									</div>\
