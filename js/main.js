@@ -677,7 +677,11 @@ function sortirajOmiljenePoMestu()
 		}
 	if (ima==false)
 	{
-		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+		if (page.includes("eng"))
+			document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">No movies to show</div>";
+		else
+			document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+		
 	}
 	else {
 		ids.sort(function(a, b) {return a.id > b.id;});
@@ -730,7 +734,10 @@ function sortirajOmiljenePoNazivu()
 		}
 	if (ima==false)
 	{
-		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+		if (page.includes("eng"))
+			document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">No movies to show</div>";
+		else
+			document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
 	}
 	else {
 		ids.sort(function(a, b) {return a.id > b.id;});
@@ -767,7 +774,10 @@ function sortirajOmiljenePoBrRez()
 		}
 	if (ima==false)
 	{
-		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+		if (page.includes("eng"))
+			document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">No movies to show</div>";
+		else
+			document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
 	}
 	else {
 		ids.sort(function(a, b) {return b.id - a.id;});
