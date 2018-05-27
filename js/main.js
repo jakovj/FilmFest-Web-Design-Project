@@ -106,49 +106,80 @@ function refreshRezervacije()
 }
 function provera_rezervacije(ime,prezime,email,telefon,projekcija,max_projekcija,br_karata)
 {		
+		var eng=false;
+		var path = window.location.pathname;
+		var page = path.split("/").pop();
+		if (page.includes("eng")) eng=true;
+
+
 		if (ime=="" || prezime=="" || email=="" || telefon=="" || projekcija=="" || br_karata=="")
 		{
-			alert("Ostavili ste prazna polja");
-			return false;
+			if (eng)
+				alert("Form has empty fields");
+			else
+				alert("Ostavili ste prazna polja");
+
+			return false;		
 		}
 		 var uzorak_ime = /^\D{2,}$/;
    		 if (!uzorak_ime.test(ime)) 
    		 {
-   		 	alert("Lose ime");
+   		 	if (eng)
+   		 		alert("Invalid name format");
+   		 	else
+   		 		alert("Neispravan format imena");
 			return false;
    		 }
    		 var uzorak_prezime = /^\D{2,}$/;
    		 if (!uzorak_prezime.test(prezime)) 
    		 {
-   		 	alert("Lose prezime");
+   		 	if (eng)
+   		 		alert("Invalid surname format");
+   		 	else
+   		 		alert("Neispravan format prezimena");
 			return false;
    		 }
    		 var uzorak_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    		 if (!uzorak_email.test(email.toLowerCase())) 
    		 {
-   		 	alert("Los email");
+   		 	if (eng)
+   		 		alert("Invalid email format");
+   		 	else
+   		 		alert("Neispravan format email-a");
 			return false;
    		 }
 
    		 var uzorak_telefon = /^\d{3}-\d{3}-\d{3,4}$/;
 		 if (!uzorak_telefon.test(telefon)) 
    		 {
-   		 	alert("Los telefon");
+   		 	if (eng)
+   		 		alert("Invalid phone number format");
+   		 	else
+   		 		alert("Neispravan format telefona");
 			return false;
    		 }
    		 if (parseInt(max_projekcija)<=parseInt(projekcija) || 0>parseInt(projekcija))
    		 {
-   		 	alert("Nepostojeca projekcija izabrana");
+   		 	if (eng)
+   		 		alert("No particular movie showing");
+   		 	else
+   		 		alert("Nepostojeća projekcija izabrana");	
 			return false;
    		 }
    		 if (parseInt(br_karata)>10)
    		 {
-   		 	alert("Nemoguce rezervisati vise od 10 karata");
+   		 	if (eng)
+   		 		alert("Can't book more than 10 tickets");
+   		 	else
+   		 		alert("Nemoguce rezervisati vise od 10 karata");
 			return false;
    		 }
    		 if (parseInt(br_karata)<=0)
    		 {
-   		 	alert("Broj karata nije validan");
+   		 	if (eng)
+   		 		alert("Number of tickets not valid");
+   		 	else
+   		 		alert("Broj karata nije validan");
 			return false;
    		 }
 
@@ -177,7 +208,12 @@ function rezervisi(film,max_projekcija)
 		if (!provera_rezervacije(ime,prezime,email,telefon,projekcija,max_projekcija,br_karata)) return;
 		else obrisi_polja();
 
-		alert("Rezervacija uspesno izvrsena");
+		var path = window.location.pathname;
+		var page = path.split("/").pop();
+		if (page.includes("eng"))
+			alert("Movie sucessfuly booked");
+		else
+			alert("Rezervacija uspešno izvršena");
 
 
 
