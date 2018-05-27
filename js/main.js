@@ -512,14 +512,27 @@ function filterMojiFilmovi(filter)
 
 
 function sortirajPoNazivu() {
-	
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
+	var nazivi = {};
+	if (page.includes("eng")) {
+		nazivi["Skver"] = "The Square";
+		nazivi["Tri Bilborda ispred Ebinga u Misuriju"] = "Three Billboards outside Ebbing, Missouri";
+		nazivi["Advokat"] = "Roman J. Israel, Esq.";
+		nazivi["Aurora Borealis: Severna svetlost"] = "Aurora Borealis: Northern lights";
+		nazivi["Oblik vode"] = "The Shape of Water";
+		nazivi["Fantomska nit"] = "Phantom Thread";
+	}
 	var parent = document.getElementById("movies");
 	var children = parent.getElementsByTagName("div");
 	var ids = [], obj, i, len;
 	for (i = 0, len = children.length; i < len; i++) {
 		obj = {};
 		obj.element = children[i];
-		obj.id = children[i].id;
+		if (page.includes("eng"))
+			obj.id = nazivi[children[i].id];
+		else
+			obj.id = children[i].id;
 		ids.push(obj);
 	}
 	ids.sort(function(a, b) {return a.id > b.id;});
