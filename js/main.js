@@ -14,6 +14,13 @@ function mojifilmovi_onload()
 	refreshRezervacije();
 
 }
+function mymovies_onload()
+{
+	loadFilmovi();
+	loadMovies();
+	showFavourites();
+	refreshRezervacije();
+}
 function prikaziOmiljene()
 {
 	var ima=false;
@@ -31,6 +38,25 @@ function prikaziOmiljene()
 	if (ima==false)
 	{
 		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+	}
+}
+function showFavourites()
+{
+	var ima=false;
+	document.getElementById("prikaz_mojih_filmova").innerHTML="";
+	for (i = 0; i < localStorage.length; i++) {
+			key = localStorage.key(i);
+			var arr=key.split('_');
+			if (arr[0]=="omiljeni")
+			{
+				ima=true;
+				var film="movie_"+arr[2];
+				document.getElementById("prikaz_mojih_filmova").innerHTML+=localStorage.getItem(film);
+			}
+		}
+	if (ima==false)
+	{
+		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">No movies to show</div>";
 	}
 }
 function dodajOmiljeni(film)
@@ -80,49 +106,80 @@ function refreshRezervacije()
 }
 function provera_rezervacije(ime,prezime,email,telefon,projekcija,max_projekcija,br_karata)
 {		
+		var eng=false;
+		var path = window.location.pathname;
+		var page = path.split("/").pop();
+		if (page.includes("eng")) eng=true;
+
+
 		if (ime=="" || prezime=="" || email=="" || telefon=="" || projekcija=="" || br_karata=="")
 		{
-			alert("Ostavili ste prazna polja");
-			return false;
+			if (eng)
+				alert("Form has empty fields");
+			else
+				alert("Ostavili ste prazna polja");
+
+			return false;		
 		}
 		 var uzorak_ime = /^\D{2,}$/;
    		 if (!uzorak_ime.test(ime)) 
    		 {
-   		 	alert("Lose ime");
+   		 	if (eng)
+   		 		alert("Invalid name format");
+   		 	else
+   		 		alert("Neispravan format imena");
 			return false;
    		 }
    		 var uzorak_prezime = /^\D{2,}$/;
    		 if (!uzorak_prezime.test(prezime)) 
    		 {
-   		 	alert("Lose prezime");
+   		 	if (eng)
+   		 		alert("Invalid surname format");
+   		 	else
+   		 		alert("Neispravan format prezimena");
 			return false;
    		 }
    		 var uzorak_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    		 if (!uzorak_email.test(email.toLowerCase())) 
    		 {
-   		 	alert("Los email");
+   		 	if (eng)
+   		 		alert("Invalid email format");
+   		 	else
+   		 		alert("Neispravan format email-a");
 			return false;
    		 }
 
    		 var uzorak_telefon = /^\d{3}-\d{3}-\d{3,4}$/;
 		 if (!uzorak_telefon.test(telefon)) 
    		 {
-   		 	alert("Los telefon");
+   		 	if (eng)
+   		 		alert("Invalid phone number format");
+   		 	else
+   		 		alert("Neispravan format telefona");
 			return false;
    		 }
    		 if (parseInt(max_projekcija)<=parseInt(projekcija) || 0>parseInt(projekcija))
    		 {
-   		 	alert("Nepostojeca projekcija izabrana");
+   		 	if (eng)
+   		 		alert("No particular movie showing");
+   		 	else
+   		 		alert("Nepostojeća projekcija izabrana");	
 			return false;
    		 }
    		 if (parseInt(br_karata)>10)
    		 {
-   		 	alert("Nemoguce rezervisati vise od 10 karata");
+   		 	if (eng)
+   		 		alert("Can't book more than 10 tickets");
+   		 	else
+   		 		alert("Nemoguce rezervisati vise od 10 karata");
 			return false;
    		 }
    		 if (parseInt(br_karata)<=0)
    		 {
-   		 	alert("Broj karata nije validan");
+   		 	if (eng)
+   		 		alert("Number of tickets not valid");
+   		 	else
+   		 		alert("Broj karata nije validan");
 			return false;
    		 }
 
@@ -151,7 +208,12 @@ function rezervisi(film,max_projekcija)
 		if (!provera_rezervacije(ime,prezime,email,telefon,projekcija,max_projekcija,br_karata)) return;
 		else obrisi_polja();
 
-		alert("Rezervacija uspesno izvrsena");
+		var path = window.location.pathname;
+		var page = path.split("/").pop();
+		if (page.includes("eng"))
+			alert("Movie sucessfuly booked");
+		else
+			alert("Rezervacija uspešno izvršena");
 
 
 
@@ -165,7 +227,7 @@ function rezervisi(film,max_projekcija)
 			localStorage.setItem(film,parseInt(br_karata));
 		}
 
-		alert("Ukupno rezervacija: " + localStorage.getItem(film));
+		//alert("Ukupno rezervacija: " + localStorage.getItem(film));
 
 
 
@@ -194,8 +256,8 @@ function loadFilmovi()
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_1\">0</span></font><br><br>\
 											<p>Trajanje:<i> 142'</i></p>\
-											<p>Rezija:<i> Ruben Östlund</i></p>\
-											<p>Glavne uloge:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
+											<p>Režija:<i> Ruben Östlund</i></p>\
+											<p>Uloge:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -215,8 +277,8 @@ function loadFilmovi()
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_2\">0</span></font><br><br>\
 											<p>Trajanje:<i> 115'</i></p>\
-											<p>Rezija:<i> Martin McDonagh</i></p>\
-											<p>Glavne uloge:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
+											<p>Režija:<i> Martin McDonagh</i></p>\
+											<p>Uloge:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -236,8 +298,8 @@ function loadFilmovi()
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_3\">0</span></font><br><br>\
 											<p>Trajanje:<i> 122'</i></p>\
-											<p>Rezija:<i> Dan Gilroy</i></p>\
-											<p>Glavne uloge:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
+											<p>Režija:<i> Dan Gilroy</i></p>\
+											<p>Uloge:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -257,8 +319,8 @@ function loadFilmovi()
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_4\">0</span></font><br><br>\
 											<p>Trajanje:<i> 104'</i></p>\
-											<p>Rezija:<i> Márta Mészáros</i></p>\
-											<p>Glavne uloge:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
+											<p>Režija:<i> Márta Mészáros</i></p>\
+											<p>Uloge:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -278,8 +340,8 @@ function loadFilmovi()
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_5\">0</span></font><br><br>\
 											<p>Trajanje:<i>123'</i></p>\
-											<p>Rezija:<i> Guillermo del Toro</i></p>\
-											<p>Glavne uloge:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
+											<p>Režija:<i> Guillermo del Toro</i></p>\
+											<p>Uloge:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -299,7 +361,7 @@ function loadFilmovi()
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_6\">0</span></font><br><br>\
 											<p>Trajanje:<i>115'</i></p>\
-											<p>Rezija:<i> Paul Thomas Anderson</i></p>\
+											<p>Režija:<i> Paul Thomas Anderson</i></p>\
 											<p>Uloge:<i> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</i></p>\
 										  </div>\
 										</div>\
@@ -319,6 +381,142 @@ function loadFilmovi()
 			localStorage.setItem("film_5",film5);
 			//localStorage.setItem("info_film_5","5_DomOmladine");
 			localStorage.setItem("film_6",film6);
+}
+function loadMovies()
+{				
+			var movie1="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film1.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">The Square</a></h3>\
+											<hr>\
+											<a href=\"2.1.1 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_1\">0</span></font><br><br>\
+											<p>Duration:<i> 142'</i></p>\
+											<p>Director:<i> Ruben Östlund</i></p>\
+											<p>Cast:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie2="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film2.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Three Billboards outside Ebbing, Missouri</a></h3>\
+											<hr>\
+											<a href=\"2.1.2 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_2\">0</span></font><br><br>\
+											<p>Duration:<i> 115'</i></p>\
+											<p>Director:<i> Martin McDonagh</i></p>\
+											<p>Cast:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie3="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film3.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Roman J. Israel, Esq.</a></h3>\
+											<hr>\
+											<a href=\"2.1.3 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_3\">0</span></font><br><br>\
+											<p>Duration:<i> 122'</i></p>\
+											<p>Director:<i> Dan Gilroy</i></p>\
+											<p>Cast:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie4="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film4.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Aurora Borealis: Northern lights</a></h3>\
+											<hr>\
+											<a href=\"2.1.4 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_4\">0</span></font><br><br>\
+											<p>Duration:<i> 104'</i></p>\
+											<p>Director:<i> Márta Mészáros</i></p>\
+											<p>Cast:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie5="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film5.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">The Shape of Water</a></h3>\
+											<hr>\
+											<a href=\"2.1.5 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_5\">0</span></font><br><br>\
+											<p>Duration:<i>123'</i></p>\
+											<p>Director:<i> Guillermo del Toro</i></p>\
+											<p>Cast:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie6="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film6.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Phantom Thread</a></h3>\
+											<hr>\
+											<a href=\"2.1.6 film_eng.html\" class=\"btn btn-warning btn-sm\">Visit movie page</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_6\">0</span></font><br><br>\
+											<p>Duration:<i>115'</i></p>\
+											<p>Director:<i> Paul Thomas Anderson</i></p>\
+											<p>Cast:<i> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			 
+			localStorage.setItem("movie_1",movie1);
+			localStorage.setItem("movie_2",movie2);
+			localStorage.setItem("movie_3",movie3);
+			localStorage.setItem("movie_4",movie4);
+			localStorage.setItem("movie_5",movie5);
+			localStorage.setItem("movie_6",movie6);
 }
 function filterMojiFilmovi(filter)
 {
@@ -350,14 +548,27 @@ function filterMojiFilmovi(filter)
 
 
 function sortirajPoNazivu() {
-	
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
+	var nazivi = {};
+	if (page.includes("eng")) {
+		nazivi["Skver"] = "The Square";
+		nazivi["Tri Bilborda ispred Ebinga u Misuriju"] = "Three Billboards outside Ebbing, Missouri";
+		nazivi["Advokat"] = "Roman J. Israel, Esq.";
+		nazivi["Aurora Borealis: Severna svetlost"] = "Aurora Borealis: Northern lights";
+		nazivi["Oblik vode"] = "The Shape of Water";
+		nazivi["Fantomska nit"] = "Phantom Thread";
+	}
 	var parent = document.getElementById("movies");
 	var children = parent.getElementsByTagName("div");
 	var ids = [], obj, i, len;
 	for (i = 0, len = children.length; i < len; i++) {
 		obj = {};
 		obj.element = children[i];
-		obj.id = children[i].id;
+		if (page.includes("eng"))
+			obj.id = nazivi[children[i].id];
+		else
+			obj.id = children[i].id;
 		ids.push(obj);
 	}
 	ids.sort(function(a, b) {return a.id > b.id;});
@@ -410,6 +621,8 @@ function sortirajPoMestu() {
 
 function sortirajOmiljenePoMestu()
 {
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
 	var ima=false;
 	var film_mestoProj = {};
 	film_mestoProj["Skver"] = "Sava Centar";
@@ -425,9 +638,14 @@ function sortirajOmiljenePoMestu()
 			var arr=key.split('_');
 			if (arr[0]=="omiljeni")
 			{
-				var film=arr[1]+"_"+arr[2];
+				var film="";
+				if (page.includes("eng"))
+					film = "movie_" + arr[2];
+				else
+					film = "film_" + arr[2];
 				obj = {};
 				obj.element = localStorage.getItem(film);
+				
 				obj.id = film_mestoProj[arr[3]];
 				ima=true;
 				ids.push(obj);
@@ -448,21 +666,42 @@ function sortirajOmiljenePoMestu()
 
 function sortirajOmiljenePoNazivu()
 {
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
+	var nazivi = {};
+	if (page.includes("eng")) {
+		nazivi["Skver"] = "The Square";
+		nazivi["Tri Bilborda ispred Ebinga u Misuriju"] = "Three Billboards outside Ebbing, Missouri";
+		nazivi["Advokat"] = "Roman J. Israel, Esq.";
+		nazivi["Aurora Borealis: Severna svetlost"] = "Aurora Borealis: Northern lights";
+		nazivi["Oblik vode"] = "The Shape of Water";
+		nazivi["Fantomska nit"] = "Phantom Thread";
+	}
+	
 	var ima=false;
 	document.getElementById("prikaz_mojih_filmova").innerHTML="";
 	var ids = [], obj, i, len;
+	
 	for (i = 0; i < localStorage.length; i++) {
 			key = localStorage.key(i);
 			var arr=key.split('_');
 			if (arr[0]=="omiljeni")
 			{
-				var film=arr[1]+"_"+arr[2];
+				var film="";
+				if (page.includes("eng"))
+					film = "movie_" + arr[2];
+				else
+					film = "film_" + arr[2];
 				obj = {};
 				obj.element = localStorage.getItem(film);
-				obj.id = arr[3];
+				//alert(film);
+				if (page.includes("eng"))
+					obj.id = nazivi[arr[3]];
+				else
+					obj.id = arr[3];
+				
 				ima=true;
 				ids.push(obj);
-				//document.getElementById("prikaz_mojih_filmova").innerHTML+=localStorage.getItem(film);
 			}
 		}
 	if (ima==false)
@@ -480,6 +719,8 @@ function sortirajOmiljenePoNazivu()
 
 function sortirajOmiljenePoBrRez()
 {
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
 	var ima=false;
 	document.getElementById("prikaz_mojih_filmova").innerHTML="";
 	var ids = [], obj, i, len;
@@ -488,7 +729,11 @@ function sortirajOmiljenePoBrRez()
 			var arr=key.split('_');
 			if (arr[0]=="omiljeni")
 			{
-				var film=arr[1]+"_"+arr[2];
+				var film="";
+				if (page.includes("eng"))
+					film = "movie_" + arr[2];
+				else
+					film = "film_" + arr[2];
 				obj = {};
 				obj.element = localStorage.getItem(film);
 				obj.id = parseInt(dohvatiBrRezervacija(arr[3]));
