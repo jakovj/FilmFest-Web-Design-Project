@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>FF - Phantom Thread</title>
+		<link rel="icon" href="../images/circle-logo.png">
+
+		<script src="../js/main.js"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Contrail+One|Damion|Dancing+Script|Fredoka+One|Fugaz+One|Kaushan+Script|Monoton|Pacifico|Righteous|Titan+One" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/styles.css" type="text/css">
+		<link rel="stylesheet" href="../lightbox2-master/dist/css/lightbox.min.css">
+	</head>
+	
+	<body onLoad="refreshFilm('brrezervacija_film_6_Fantomska nit')"><!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--Header-->
+		<header>
+			<div class="row" style="background-image: url('../images/back2.jpg');background-size:cover;width:100%;margin:0px;">
+				<div class="col-lg-12">
+					<div class="float-right" style="padding:1%;">
+							<a href="2.1.6 film.html"><img src="../images/srb.png" width="50px" height="30px;"></a>
+							<a href="2.1.6 film_eng.html"><img src="../images/eng.png" width="50px" height="30px;"  ></a>
+					</div>
+				</div>
+				<div class="col-4 col-lg-2">
+					<img src="../images/festival-logo.png" alt="LOGO" width="100%" style="padding:10%;">
+				</div>
+				<div class="col-8 col-lg-10">
+					<br>
+					<p id="glavni_naslov">Film &nbsp;&nbsp; &nbsp; festival</p>
+					<p id="glavni_datum" >1.6-2.6</p>
+				</div>
+		</header>			
+				
+				
+		<!--Navbar-->		
+			<nav class="stroke navbar navbar-expand-md navbar-dark" style="background-image: url('../images/pattern.png');" >
+				<!-- logo -->
+				<a class="navbar-brand ml-4" href="index_eng.html"><img src="../images/circle-logo.png" alt="LOGO" style="width:50px;"></a>
+				
+				<!-- kada se smanji prozor da se pojavi collapse button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<!-- likovi -->
+				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item">
+							<a class="nav-link a-link" href="index_eng.html" >Home</a>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="ofestivalu-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ofestivalu_eng.html">About festival</a>
+							<div class="dropdown-menu" aria-labelledby="ofestivalu-dd">
+								 <a class="dropdown-item" href="1.1 ziri_eng.html">		<img src="../images/dropdown-icons/jury-icon.png" width="25px">&nbsp;		Judges</a>
+								 <a class="dropdown-item" href="1.2 nagrade_eng.html">	<img src="../images/dropdown-icons/award-icon.png" width="25px">&nbsp;	Awards</a>
+								 <a class="dropdown-item" href="1.3 sponzori_eng.html">	<img src="../images/dropdown-icons/sponsor-icon.png" width="25px">&nbsp;	Sponsors</a>
+								 <a class="dropdown-item" href="1.4 kontakt_eng.html">	<img src="../images/dropdown-icons/contact-icon.png" width="25px">&nbsp;	Contact</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown active">
+							<a class="nav-link dropdown-toggle" id="program-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="program_eng.html">Program</a>
+							<div class="dropdown-menu" aria-labelledby="program-dd">
+								 <a class="dropdown-item selected" href="2.1 filmovi_eng.html">			<img src="../images/dropdown-icons/film-icon.png" width="25px">&nbsp; Movies</a>
+								 <a class="dropdown-item" href="2.2 mesta_projekcija_eng.html">	<img src="../images/dropdown-icons/place-icon.png" width="25px">&nbsp; Theaters</a>
+								 <a class="dropdown-item" href="2.3 prodajna_mesta_eng.html">	<img src="../images/dropdown-icons/ticket-icon.png" width="25px">&nbsp; Ticketing</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="3 glumci_eng.html">Actors</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="4 vesti_eng.html">News</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="5 mojifilmovi_eng.html">My Movies</a>
+						</li>
+					</ul>
+				</div> 
+			</nav>
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+		
+		<div class="container" style="padding-top:20px;">
+			<div class="row">
+				<div class="col-12">
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item ">Program</li>
+						<li class="breadcrumb-item"><a href="2.1 filmovi_eng.html" class="breadcrumb-link">Movies</a></li>
+						<li class="breadcrumb-item active">Phantom Thread</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-6">
+						<img src="../images/filmovi/film6.jpg" width="100%">
+					</div>
+					<div class="col-6">
+						<div class="container">
+						  <h1>Phantom Thread</h1>
+						  <form name="forma_mojifilmovi">
+							  <div class="btn-group-toggle" data-toggle="buttons">
+								  <label class="btn btn-warning btn-sm active" onClick="dodajOmiljeni('omiljeni_film_6_Fantomska nit')">
+								    <input type="checkbox" checked autocomplete="off" onClick="dodajOmiljeni('omiljeni_film_6_Fantomska nit')"><span style="color:white"> Add to "My Movies"</span>
+								  </label>
+							  </div>
+						  </form>
+						  <br>
+						 <p>Number of reservations: <font color="orange"><span id="br_rezervacija"> x </span> </font></p>              
+						  <table class="table table-bordered">
+						    <tbody>
+						      <tr>
+						        <td><strong>Director</strong></td>
+						        <td>Paul Thomas Anderson</td>
+						      </tr>
+						      <tr>
+						        <td><strong>Cast</strong></td>
+						        <td>Daniel Day-Lewis, Vicky Krieps, Lesley Manville</td>
+						      </tr>
+						      <tr>
+						        <td><strong>Duration</strong></td>
+						        <td>115'</td>
+						      </tr>
+						    </tbody>
+						  </table>
+						  <hr>
+						  <h4>Short description:</h4>
+						  <span class="badge badge-danger">Spoiler alert</span>
+							<i class="film-description">
+							Set in the glamour of 1950’s post-war London, renowned dressmaker Reynolds Woodcock and his sister Cyril are at the center of British fashion, dressing royalty, movie stars, heiresses, socialites, debutants and dames with the distinct style of The House of Woodcock. Women come and go through Woodcock's life, providing the confirmed bachelor with inspiration and companionship, until he comes across a young, strong-willed woman, Alma, who soon becomes a fixture in his life as his muse and lover. Once controlled and planned, he finds his carefully tailored life disrupted by love.
+							</i>
+						</div>
+					</div>
+			</div>
+			<hr>
+			<div class="row">
+					<div class="col-12">
+						<h2>Showing:</h2>
+						<p>
+						 	<table class="table table-striped table-light">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Date</th>
+										<th>Time</th>
+										<th>Location</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tr>
+									<td>0</td>
+									<td>1. june</td>
+									<td>15:00</td>
+									<td>Dom Omladine</td>
+									<td>3 eur</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2. june</td>
+									<td>17:30</td>
+									<td>Sava Centar</td>
+									<td>2.5 eur</td>
+								</tr>
+							</table>
+						</p>
+					</div>	
+			</div>
+			<hr>
+			<div class="row">
+					
+					<div class="col-6 col-md-6" id="rezervisi">
+						<h2>Book ticket:</h2>
+							<form name="rezervacija">
+								<table>
+									<tr class="rezervacija-col">
+										<td>First name &nbsp;</td>
+										<td><input type="text" class="form-control" placeholder="First name" id="ime"></td>
+									</tr>
+									<tr class="rezervacija-col">
+										<td>Last name &nbsp;</td>
+										<td><input type="text" class="form-control" placeholder="Last name" id="prezime"></td>
+									</tr>
+									<tr class="rezervacija-col">
+										<td>E-mail &nbsp;</td>
+										<td><input type="email" class="form-control" placeholder="example@gmail.com"  id="email"></td>
+									</tr>
+									<tr class="rezervacija-col">
+										<td>Phone number &nbsp;</td>
+										<td><input type="text" class="form-control" placeholder="xxx - xxx - xxx" id="telefon"></td>
+									</tr>
+									<tr class="rezervacija-col">
+										<td>Showing &nbsp;</td>
+										<td><input type="text" class="form-control" placeholder="#" id="projekcija"></td>
+									</tr>
+									<tr class="rezervacija-col">
+										<td>Number of tickets  &nbsp;</td>
+										<td><input type="text" class="form-control" placeholder="0" id="br_karata"></td>
+									</tr>
+									<tr class="rezervacija-col">
+										<td colspan="2"><br><center><input type="button" class="btn btn-secondary-outline" value="Book" onClick="rezervisi('brrezervacija_film_6_Fantomska nit','2')"></center></td>
+									</tr>
+								</table>
+								
+							</form>
+						
+					</div>	
+					<div class="col-6">
+						<div id="map" style="width:100%;height:100%;"></div>
+						<script>
+						
+						function initMap() {
+				        var myLatLng = {lat: 44.815536567747884, lng: 20.462941171433727};
+
+				        var map = new google.maps.Map(document.getElementById('map'), {
+				          zoom: 13,
+				          center: myLatLng
+				        });
+
+				        var marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Dom Omladine'
+				        });
+				      }
+						
+						</script>
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap"></script>
+					</div>
+			</div>
+			<hr>
+			<div class="row">
+					<div class="col-12">
+						<center>
+						 	<div>
+							  <a class="example-image-link" href="../images/galerija6/slika1.jpg" data-lightbox="example-set" data-title="Picture 1"><img class="example-image" src="../images/galerija6/slika1.jpg" alt="" width="20%"></a>
+							  <a class="example-image-link" href="../images/galerija6/slika2.jpg" data-lightbox="example-set" data-title="Picture 3"><img class="example-image" src="../images/galerija6/slika2.jpg" alt="" width="20%"></a>
+							  <a class="example-image-link" href="../images/galerija6/slika3.jpg" data-lightbox="example-set" data-title="Picture 2"><img class="example-image" src="../images/galerija6/slika3.jpg" alt="" width="20%"></a>
+							  <a class="example-image-link" href="../images/galerija6/slika4.jpg" data-lightbox="example-set" data-title="Picture 3"><img class="example-image" src="../images/galerija6/slika4.jpg" alt="" width="20%"></a>
+							</div>
+						</center>
+					</div>	
+			</div>
+
+		</div>
+		<hr>
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--Footer-->
+
+		<footer>
+			<div class="row" style="margin:0px;padding:5px;">
+				
+				<div class="col-4" style="padding:10px">
+						<a href="https://sr-rs.facebook.com/">
+							<img src="../images/social-icons/fb-icon.png" style="max-width: 8%;min-width:25px;"/>
+						</a>
+						&nbsp;
+						<a href="https://www.youtube.com/">
+							<img src="../images/social-icons/yt-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="https://www.instagram.com/">
+							<img src="../images/social-icons/ig-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="https://www.twitter.com/">
+							<img src="../images/social-icons/tw-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="mailto:hm150112d@student.etf.bg.ac.rs?Subject=film%20fest">
+							<img src="../images/social-icons/em-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+				</div>
+				<div class="col-8" align="right" style="padding:5px">
+					<i class="footer-font-resp">
+						&copy; Copyright 2018.<br>
+						Jakov Jezdić and Marko Hudomal, Department of Software Engineering,  Faculty of Electrical Engineering, University of Belgrade
+					<i>
+				</div>				
+		</footer>	
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		
+		
+		
+		
+		
+	<script src="../lightbox2-master/dist/js/lightbox-plus-jquery.min.js"></script>
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	</body>
+</html>

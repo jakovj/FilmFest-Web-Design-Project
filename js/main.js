@@ -14,6 +14,13 @@ function mojifilmovi_onload()
 	refreshRezervacije();
 
 }
+function mymovies_onload()
+{
+	loadFilmovi();
+	loadMovies();
+	showFavourites();
+	refreshRezervacije();
+}
 function prikaziOmiljene()
 {
 	var ima=false;
@@ -31,6 +38,25 @@ function prikaziOmiljene()
 	if (ima==false)
 	{
 		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">Niste izabrali ni jedan film</div>";
+	}
+}
+function showFavourites()
+{
+	var ima=false;
+	document.getElementById("prikaz_mojih_filmova").innerHTML="";
+	for (i = 0; i < localStorage.length; i++) {
+			key = localStorage.key(i);
+			var arr=key.split('_');
+			if (arr[0]=="omiljeni")
+			{
+				ima=true;
+				var film="movie_"+arr[2];
+				document.getElementById("prikaz_mojih_filmova").innerHTML+=localStorage.getItem(film);
+			}
+		}
+	if (ima==false)
+	{
+		document.getElementById("prikaz_mojih_filmova").innerHTML="<div class=\"col-md-12\">No movies to show</div>";
 	}
 }
 function dodajOmiljeni(film)
@@ -165,7 +191,7 @@ function rezervisi(film,max_projekcija)
 			localStorage.setItem(film,parseInt(br_karata));
 		}
 
-		alert("Ukupno rezervacija: " + localStorage.getItem(film));
+		//alert("Ukupno rezervacija: " + localStorage.getItem(film));
 
 
 
@@ -193,9 +219,9 @@ function loadFilmovi()
 											<a href=\"2.1.1 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_1\">0</span></font><br><br>\
-											<p>Trajanje:<i> 142'</i></p>\
-											<p>Rezija:<i> Ruben Östlund</i></p>\
-											<p>Glavne uloge:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
+											<p>Duration:<i> 142'</i></p>\
+											<p>Director:<i> Ruben Östlund</i></p>\
+											<p>Cast:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -214,9 +240,9 @@ function loadFilmovi()
 											<a href=\"2.1.2 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_2\">0</span></font><br><br>\
-											<p>Trajanje:<i> 115'</i></p>\
-											<p>Rezija:<i> Martin McDonagh</i></p>\
-											<p>Glavne uloge:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
+											<p>Duration:<i> 115'</i></p>\
+											<p>Director:<i> Martin McDonagh</i></p>\
+											<p>Cast:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -235,9 +261,9 @@ function loadFilmovi()
 											<a href=\"2.1.3 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_3\">0</span></font><br><br>\
-											<p>Trajanje:<i> 122'</i></p>\
-											<p>Rezija:<i> Dan Gilroy</i></p>\
-											<p>Glavne uloge:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
+											<p>Duration:<i> 122'</i></p>\
+											<p>Director:<i> Dan Gilroy</i></p>\
+											<p>Cast:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -256,9 +282,9 @@ function loadFilmovi()
 											<a href=\"2.1.4 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_4\">0</span></font><br><br>\
-											<p>Trajanje:<i> 104'</i></p>\
-											<p>Rezija:<i> Márta Mészáros</i></p>\
-											<p>Glavne uloge:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
+											<p>Duration:<i> 104'</i></p>\
+											<p>Director:<i> Márta Mészáros</i></p>\
+											<p>Cast:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -277,9 +303,9 @@ function loadFilmovi()
 											<a href=\"2.1.5 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_5\">0</span></font><br><br>\
-											<p>Trajanje:<i>123'</i></p>\
-											<p>Rezija:<i> Guillermo del Toro</i></p>\
-											<p>Glavne uloge:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
+											<p>Duration:<i>123'</i></p>\
+											<p>Director:<i> Guillermo del Toro</i></p>\
+											<p>Cast:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -298,9 +324,9 @@ function loadFilmovi()
 											<a href=\"2.1.6 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
 											<br><br>\
 											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_6\">0</span></font><br><br>\
-											<p>Trajanje:<i>115'</i></p>\
-											<p>Rezija:<i> Paul Thomas Anderson</i></p>\
-											<p>Uloge:<i> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</i></p>\
+											<p>Duration:<i>115'</i></p>\
+											<p>Director:<i> Paul Thomas Anderson</i></p>\
+											<p>Cast:<i> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</i></p>\
 										  </div>\
 										</div>\
 									</div>\
@@ -319,6 +345,142 @@ function loadFilmovi()
 			localStorage.setItem("film_5",film5);
 			//localStorage.setItem("info_film_5","5_DomOmladine");
 			localStorage.setItem("film_6",film6);
+}
+function loadMovies()
+{				
+			var movie1="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film1.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">The Square</a></h3>\
+											<hr>\
+											<a href=\"2.1.1 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_1\">0</span></font><br><br>\
+											<p>Duration:<i> 142'</i></p>\
+											<p>Director:<i> Ruben Östlund</i></p>\
+											<p>Cast:<i> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie2="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film2.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Three Billboards outside Ebbing, Missouri</a></h3>\
+											<hr>\
+											<a href=\"2.1.2 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_2\">0</span></font><br><br>\
+											<p>Duration:<i> 115'</i></p>\
+											<p>Director:<i> Martin McDonagh</i></p>\
+											<p>Cast:<i> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie3="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film3.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Roman J. Israel, Esq.</a></h3>\
+											<hr>\
+											<a href=\"2.1.3 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_3\">0</span></font><br><br>\
+											<p>Duration:<i> 122'</i></p>\
+											<p>Director:<i> Dan Gilroy</i></p>\
+											<p>Cast:<i> Denzel Washington, Colin Farrell, Carmen Ejogo</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie4="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film4.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Aurora Borealis: Northern lights</a></h3>\
+											<hr>\
+											<a href=\"2.1.4 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_4\">0</span></font><br><br>\
+											<p>Duration:<i> 104'</i></p>\
+											<p>Director:<i> Márta Mészáros</i></p>\
+											<p>Cast:<i> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie5="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film5.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">The Shape of Water</a></h3>\
+											<hr>\
+											<a href=\"2.1.5 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_5\">0</span></font><br><br>\
+											<p>Duration:<i>123'</i></p>\
+											<p>Director:<i> Guillermo del Toro</i></p>\
+											<p>Cast:<i> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			var movie6="<div class=\"col-md-12\">\
+								<div class=\"card\">\
+									<div class=\"card-body\">\
+										<div class=\"media\">\
+										  <img class=\"mr-3\" src=\"../images/filmovi/film6.jpg\" alt=\"Film slika\" width=\"25%\">\
+										  <div class=\"media-body\">\
+											<h3 class=\"mt-0\"><a class=\"ziri-link\">Phantom Thread</a></h3>\
+											<hr>\
+											<a href=\"2.1.6 film.html\" class=\"btn btn-warning btn-sm\">Idi na stranicu filma</a>\
+											<br><br>\
+											<img src=\"../images/dropdown-icons/ticket-icon.png\" width=\"20px\">&nbsp;<font color=\"orange\"<span id=\"film_rez_6\">0</span></font><br><br>\
+											<p>Duration:<i>115'</i></p>\
+											<p>Director:<i> Paul Thomas Anderson</i></p>\
+											<p>Cast:<i> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</i></p>\
+										  </div>\
+										</div>\
+									</div>\
+									<hr>\
+								</div>\
+							</div>\
+							";
+			 
+			localStorage.setItem("movie_1",movie1);
+			localStorage.setItem("movie_2",movie2);
+			localStorage.setItem("movie_3",movie3);
+			localStorage.setItem("movie_4",movie4);
+			localStorage.setItem("movie_5",movie5);
+			localStorage.setItem("movie_6",movie6);
 }
 function filterMojiFilmovi(filter)
 {

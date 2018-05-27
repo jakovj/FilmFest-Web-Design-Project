@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>FF - Movies</title>
+		<link rel="icon" href="../images/circle-logo.png">
+
+
+		<link href="https://fonts.googleapis.com/css?family=Contrail+One|Damion|Dancing+Script|Fredoka+One|Fugaz+One|Kaushan+Script|Monoton|Pacifico|Righteous|Titan+One" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="../css/styles.css" type="text/css">
+		<link rel="stylesheet" href="../css/cards-style.css" type="text/css">
+
+		<script src="../js/main.js"></script>
+	</head>
+	
+	<body onLoad="filmovi_onload()">
+		
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--Header-->
+		<header>
+			<div class="row" style="background-image: url('../images/back2.jpg');background-size:cover;width:100%;margin:0px;">
+				<div class="col-lg-12">
+					<div class="float-right" style="padding:1%;">
+							<a href="2.1 filmovi.html"><img src="../images/srb.png" width="50px" height="30px;"></a>
+							<a href="2.1 filmovi_eng.html"><img src="../images/eng.png" width="50px" height="30px;"  ></a>
+					</div>
+				</div>
+				<div class="col-4 col-lg-2">
+					<img src="../images/festival-logo.png" alt="LOGO" width="100%" style="padding:10%;">
+				</div>
+				<div class="col-8 col-lg-10">
+					<br>
+					<p id="glavni_naslov">Film &nbsp;&nbsp; &nbsp; festival</p>
+					<p id="glavni_datum" >1.6-2.6</p>
+				</div>
+		</header>		
+				
+				
+		<!--Navbar-->		
+			<nav class="stroke navbar navbar-expand-md navbar-dark" style="background-image: url('../images/pattern.png');" >
+				<!-- logo -->
+				<a class="navbar-brand ml-4" href="index_eng.html"><img src="../images/circle-logo.png" alt="LOGO" style="width:50px;"></a>
+				
+				<!-- kada se smanji prozor da se pojavi collapse button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<!-- likovi -->
+				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item">
+							<a class="nav-link a-link" href="index_eng.html" >Home</a>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="ofestivalu-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="ofestivalu_eng.html">About festival</a>
+							<div class="dropdown-menu" aria-labelledby="ofestivalu-dd">
+								 <a class="dropdown-item" href="1.1 ziri_eng.html">		<img src="../images/dropdown-icons/jury-icon.png" width="25px">&nbsp;		Judges</a>
+								 <a class="dropdown-item" href="1.2 nagrade_eng.html">	<img src="../images/dropdown-icons/award-icon.png" width="25px">&nbsp;	Awards</a>
+								 <a class="dropdown-item" href="1.3 sponzori_eng.html">	<img src="../images/dropdown-icons/sponsor-icon.png" width="25px">&nbsp;	Sponsors</a>
+								 <a class="dropdown-item" href="1.4 kontakt_eng.html">	<img src="../images/dropdown-icons/contact-icon.png" width="25px">&nbsp;	Contact</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown active">
+							<a class="nav-link dropdown-toggle" id="program-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="program_eng.html">Program</a>
+							<div class="dropdown-menu" aria-labelledby="program-dd">
+								 <a class="dropdown-item selected" href="2.1 filmovi_eng.html">			<img src="../images/dropdown-icons/film-icon.png" width="25px">&nbsp; Movies</a>
+								 <a class="dropdown-item" href="2.2 mesta_projekcija_eng.html">	<img src="../images/dropdown-icons/place-icon.png" width="25px">&nbsp; Theaters</a>
+								 <a class="dropdown-item" href="2.3 prodajna_mesta_eng.html">	<img src="../images/dropdown-icons/ticket-icon.png" width="25px">&nbsp; Ticketing</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="3 glumci_eng.html">Actors</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="4 vesti_eng.html">News</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="5 mojifilmovi_eng.html">My Movies</a>
+						</li>
+					</ul>
+				</div> 
+			</nav>
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+		
+		<div class="container" style="padding-top:20px;">
+			<div class="row">
+				<div class="col-12">
+						<br>
+						<h1>Movie program</h1>
+						<hr>
+						<div id="myBtnContainer">
+						  <p>Sort by
+						  <button class="btn btn-sm active" onclick="sortirajPoNazivu()"> by film name</button>
+						  <button class="btn btn-sm" onclick="sortirajPoMestu()"> by theater</button>
+						  <button class="btn btn-sm" onclick="sortirajPoRez()"> by number of reservations</button>
+						  </p>
+						</div>
+						<br>
+				</div>
+				
+				
+				<div class="col-12">
+					<center>
+					<div id="movies" style="padding-bottom:20px">
+						<div  style="display: inline-block;padding:10px " id="Skver">
+							<span class="badge badge-light">
+								<a href="2.1.1 film_eng.html" class="sortable-link">
+									<h3>The Square</h3>
+								</a>
+							</span>
+						</div>
+						<div style="display: inline-block;padding:10px" id="Tri Bilborda ispred Ebinga u Misuriju">
+							<span class="badge badge-light">
+								<a href="2.1.2 film_eng.html" class="sortable-link">
+									<h3>Three Billboards outside Ebbing, Missouri</h3>
+								</a>
+							</span>
+						</div>
+						<div style="display: inline-block;padding:10px" id="Advokat">
+							<span class="badge badge-light">
+								<a href="2.1.3 film_eng.html" class="sortable-link">
+									<h3>Roman J. Israel, Esq.</h3>
+								</a>
+							</span>
+						</div>
+						<div style="display: inline-block;padding:10px" id="Aurora Borealis: Severna svetlost">
+							<span class="badge badge-light">
+								<a href="2.1.4 film_eng.html" class="sortable-link">
+									<h3>Aurora Borealis: Northern lights</h3>
+								</a>
+							</span>
+						</div>
+						<div style="display: inline-block;padding:10px" id="Oblik vode">
+							<span class="badge badge-light">
+								<a href="2.1.5 film_eng.html" class="sortable-link">
+									<h3>The Shape of Water</h3>
+								</a>
+							</span>
+						</div>
+						
+						<div style="display: inline-block;padding:10px" id="Fantomska nit">
+							<span class="badge badge-light">
+								<a href="2.1.6 film_eng.html" class="sortable-link">
+									<h3>Phantom Thread</h3>
+								</a>
+							</span>
+						</div>
+						
+					</div>
+					</center>
+					<hr>
+				</div>
+				
+				
+
+				<div class="col-12 col-md-6">
+					<!--CARD 2.1-->
+				    <div class="example-2 card">
+				      <div class="wrapper"  style="background-image: url('../images/filmovi/film1.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+				        <div class="header">
+				          <div class="trajanje">
+				            <span style="color:white">Duration: 142’ </span>
+				          </div>
+				          <ul class="menu-content">
+				            <li><a href="2.1.1 film_eng.html#rezervisi"class="fa fa-bookmark-o"><span id="film_rez_1">x</span></a></li>
+				          </ul>
+				        </div>
+				        <div class="data">
+				          <div class="content">
+				            <span class="author">Ruben Östlund</span>
+				            <h1 class="title"><a href="2.1.1 film_eng.html">The Square</a></h1>
+				            <p class="text"> <strong> Cast:</strong> Claes Bang, Elisabeth Moss, Dominic West, Terry Notary</p>
+				            <a href="2.1.1 film_eng.html" class="button">Show more</a>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+
+				<div class="col-12 col-md-6">
+				    <!--CARD 2.2-->
+				    <div class="example-2 card">
+				      <div class="wrapper"  style="background-image: url('../images/filmovi/film2.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+				        <div class="header">
+				          <div class="trajanje">
+				            <span style="color:white">Duration: 115’ </span>
+				          </div>
+				          <ul class="menu-content">
+				            <li><a href="2.1.2 film_eng.html#rezervisi"class="fa fa-bookmark-o"><span id="film_rez_2">x</span></a></li>
+				          </ul>
+				        </div>
+				        <div class="data">
+				          <div class="content">
+				            <span class="author">Martin McDonagh</span>
+				            <h1 class="title"><a href="2.1.2 film_eng.html">Three Billboards outside Ebbing, Missouri</a></h1>
+				            <p class="text"> <strong> Cast:</strong> Frances McDormand, Woody Harrelson, Sam Rockwell, Peter Dinklage</p>
+				            <a href="2.1.2 film_eng.html" class="button">Show more</a>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+				<div class="col-12 col-md-6">
+				    <!--CARD 2.3-->
+				    <div class="example-2 card">
+				      <div class="wrapper"  style="background-image: url('../images/filmovi/film3.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+				        <div class="header">
+				          <div class="trajanje">
+				            <span>Duration: 107’ </span>
+				           </div>
+				          <ul class="menu-content">
+				            <li><a href="2.1.3 film_eng.html#rezervisi"class="fa fa-bookmark-o"><span id="film_rez_3">x</span></a></li>
+				          </ul>
+				        </div>
+				        <div class="data">
+				          <div class="content">
+				            <span class="author">Dan Gilroy</span>
+				            <h1 class="title"><a href="2.1.3 film_eng.html">Roman J. Israel, Esq.</a></h1>
+				            <p class="text"> <strong> Cast:</strong> Denzel Washington, Colin Farrell, Carmen Ejogo</p>
+				            <a href="2.1.3 film_eng.html" class="button">Show more</a>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+				<!--CARD 2.4-->
+				<div class="col-12 col-md-6">
+				    <div class="example-2 card">
+				      <div class="wrapper"  style="background-image: url('../images/filmovi/film4.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+				        <div class="header">
+				          <div class="trajanje">
+				            <span>Duration: 104’ </span>
+				          </div>
+				          <ul class="menu-content">
+				            <li><a href="2.1.4 film_eng.html#rezervisi"class="fa fa-bookmark-o"><span id="film_rez_4">x</span></a></li>
+				          </ul>
+				        </div>
+				        <div class="data">
+				          <div class="content">
+				            <span class="author">Márta Mészáros</span>
+				            <h1 class="title"><a href="2.1.4 film_eng.html">Aurora Borealis: Northern lights</a></h1>
+				            <p class="text"> <strong> Cast:</strong> Mari Törőcsik, Franciska Törőcsik, Ildikó Tóth, Jákob Ladányi</p>
+				            <a href="2.1.4 film_eng.html" class="button">Show more</a>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+				<!--CARD 2.5-->
+			    <div class="col-12 col-md-6">
+				    <div class="example-2 card">
+				      <div class="wrapper"  style="background-image: url('../images/filmovi/film5.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+				        <div class="header">
+				          <div class="trajanje">
+				            <span style="color:white">Duration: 123’ </span>
+				          </div>
+				          <ul class="menu-content">
+				            <li><a href="2.1.5 film_eng.html#rezervisi"class="fa fa-bookmark-o"><span id="film_rez_5">x</span></a></li>
+				          </ul>
+				        </div>
+				        <div class="data">
+				          <div class="content">
+				            <span class="author">Guillermo del Toro</span>
+				            <h1 class="title"><a href="2.1.5 film_eng.html">The Shape of Water</a></h1>
+				            <p class="text"> <strong> Cast:</strong> Sally Hawkins, Doug Jones, Michael Shannon, Richard Jenkins, Octavia Spencer, Michael Stuhlbarg</p>
+				            <a href="2.1.5 film_eng.html" class="button">Show more</a>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+				<!--CARD 2.6-->
+				<div class="col-12 col-md-6">
+				    <div class="example-2 card">
+				      <div class="wrapper"  style="background-image: url('../images/filmovi/film6.jpg');background-repeat:no-repeat; background-size:cover;background-position:center">
+				        <div class="header">
+				          <div class="trajanje">
+				            <span style="color:white">Duration: 115’ </span>
+				          </div>
+				          <ul class="menu-content">
+				            <li><a href="2.1.6 film_eng.html#rezervisi"class="fa fa-bookmark-o"><span id="film_rez_6">x</span></a></li>
+				          </ul>
+				        </div>
+				        <div class="data">
+				          <div class="content">
+				            <span class="author">Paul Thomas Anderson</span>
+				            <h1 class="title"><a href="2.1.6 film_eng.html">Phantom Thread</a></h1>
+				            <p class="text"> <strong> Cast:</strong> Daniel Day-Lewis, Vicky Krieps, Lesley Manville</p>
+				            <a href="2.1.6 film_eng.html" class="button">Show more</a>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<hr>
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--Footer-->
+
+		<footer>
+			<div class="row" style="margin:0px;padding:5px;">
+				
+				<div class="col-4" style="padding:10px">
+						<a href="https://sr-rs.facebook.com/">
+							<img src="../images/social-icons/fb-icon.png" style="max-width: 8%;min-width:25px;"/>
+						</a>
+						&nbsp;
+						<a href="https://www.youtube.com/">
+							<img src="../images/social-icons/yt-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="https://www.instagram.com/">
+							<img src="../images/social-icons/ig-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="https://www.twitter.com/">
+							<img src="../images/social-icons/tw-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+						&nbsp;
+						<a href="mailto:hm150112d@student.etf.bg.ac.rs?Subject=film%20fest">
+							<img src="../images/social-icons/em-icon.png" style="max-width: 8%;min-width:25px;" />
+						</a>
+				</div>
+				<div class="col-8" align="right" style="padding:5px">
+					<i class="footer-font-resp">
+						&copy; Copyright 2018.<br>
+						Jakov Jezdić and Marko Hudomal, Department of Software Engineering,  Faculty of Electrical Engineering, University of Belgrade
+					<i>
+				</div>				
+		</footer>	
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
