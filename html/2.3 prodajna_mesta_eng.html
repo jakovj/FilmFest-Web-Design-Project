@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script language="javascript">
-			function change() {
-				document.location.href = "index.html";
-			}
-		
-		</script>
-		<title>FF - Home</title>
+		<meta charset="UTF-8">
+
+		<title>FF - Ticketing</title>
+		<link rel="icon" href="../images/circle-logo.png">
 		<link href="https://fonts.googleapis.com/css?family=Contrail+One|Damion|Dancing+Script|Fredoka+One|Fugaz+One|Kaushan+Script|Monoton|Pacifico|Righteous|Titan+One" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/styles.css" type="text/css">
 		
+
 	</head>
 	
 	<body >
-	
+		
+	<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--Header-->
 		<header>
 			<div class="row" style="background-image: url('../images/back2.jpg');background-size:cover;width:100%;margin:0px;">
 				<div class="col-lg-12">
 					<div class="float-right" style="padding:1%;">
-							<a href="index.html"><img src="../images/srb.png" width="50px" height="30px;"></a>
-							<a href="index_eng.html"><img src="../images/eng.png" width="50px" height="30px;"  ></a>
+							<a href="2.3 prodajna_mesta.html"><img src="../images/srb.png" width="50px" height="30px;"></a>
+							<a href="2.3 prodajna_mesta_eng.html"><img src="../images/eng.png" width="50px" height="30px;"  ></a>
 					</div>
 				</div>
 				<div class="col-4 col-lg-2">
@@ -47,7 +47,7 @@
 				<!-- likovi -->
 				<div class="collapse navbar-collapse navbar-center" id="collapsibleNavbar">
 					<ul class="navbar-nav mx-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link a-link" href="index_eng.html" >Home</a>
 						</li>
 						
@@ -60,12 +60,12 @@
 								 <a class="dropdown-item" href="1.4 kontakt_eng.html">	<img src="../images/dropdown-icons/contact-icon.png" width="25px">&nbsp;	Contact</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown">
+						<li class="nav-item dropdown active">
 							<a class="nav-link dropdown-toggle" id="program-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="program.html">Program</a>
 							<div class="dropdown-menu" aria-labelledby="program-dd">
 								 <a class="dropdown-item" href="2.1 filmovi_eng.html">			<img src="../images/dropdown-icons/film-icon.png" width="25px">&nbsp; Movies</a>
 								 <a class="dropdown-item" href="2.2 mesta_projekcija_eng.html">	<img src="../images/dropdown-icons/place-icon.png" width="25px">&nbsp; Theaters</a>
-								 <a class="dropdown-item" href="2.3 prodajna_mesta_eng.html">	<img src="../images/dropdown-icons/ticket-icon.png" width="25px">&nbsp; Ticketing</a>
+								 <a class="dropdown-item selected" href="2.3 prodajna_mesta_eng.html">	<img src="../images/dropdown-icons/ticket-icon.png" width="25px">&nbsp; Ticketing</a>
 							</div>
 						</li>
 						<li class="nav-item">
@@ -80,32 +80,88 @@
 					</ul>
 				</div> 
 			</nav>
-		
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 		<div class="container" style="padding-top:20px;">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="jumbotron" style="background-size:cover;background-image: url('../images/naslovna.jpg'); padding-top: 180px">
-						<div class="jumbotron" style="padding-top: 5%" >
-							<h1>Welcome to official Film Fest website</h1><br>
-							<p>The first film-fest will be opened on June 1, 2018 in Dom Omladine, screening the film "Advocate" Dana Gilroy.
-								Imagined as an annual cross-section of the best movies of the season, we believe that the film festival will be
-								<i> Film fest </i> grows into one of the most important film reviews and become one of the main events,
-								with whom many new young generations will grow.
-							</p>
-							<hr>
-							<p>On this site you can find all information related to the festival itself,
-								jury, awards, sponsors, contacts, actors, films ..
+				<div class="col-12">
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item">Program</li>
+						<li class="breadcrumb-item active">Ticketing<li>
+						
+					</ul>
+				</div>
+				<div class="col-sm-8">					
+					<div id="map" style="width:100%;height:100%;"></div>
+					<script>
+						
+						function initMap() {
+				        var myLatLng = {lat: 44.815536567747884, lng: 20.462941171433727};
 
-							</p>
-						</div>
+				        var map = new google.maps.Map(document.getElementById('map'), {
+				          zoom: 13,
+				          center: myLatLng
+				        });
+
+				        var marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Dom Omladine'
+				        });
+						myLatLng = {lat: 44.808701648309146, lng: 20.43288970163087};
+						marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Sava Centar'
+				        });
+						myLatLng = {lat: 44.81412093825238, lng: 20.421560050751964};
+						marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          title: 'Eventim'
+				        });
+				      }
+						
+					</script>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap"></script>
+
+				</div>
+
+				<div class="col-md-4">
+
+					<div class="jumbotron" style="padding:20px;padding-left:20px;padding-right:20px;background-size:cover; background-image: url('./img/brown-gradient.png');">
+						<h3>Sava centar</h3>
+						<hr>
+						Milentija Popovića 9, Beograd<br>
+						<a href="http://www.savacentar.net">savacentar.net</a><br>
+						10:00 - 18:00
+						<br>
+						<h5></h5>
 					</div>
+					<div class="jumbotron" style="padding:20px;padding-left:20px;padding-right:20px;background-size:cover; background-image: url('./img/brown-gradient.png');">
+						<h3>Dom Omladine</h3>
+						<hr>
+						Makedonska 22, Beograd<br>
+						<a href="http://www.domomladine.org">domomladine.org</a><br>
+						12:00 - 20:00
+						<br>
+						<h5></h5>
+					</div>
+					<div class="jumbotron" style="padding:20px;padding-left:20px;padding-right:20px;background-size:cover; background-image: url('./img/brown-gradient.png');">
+						<h3>Eventim</h3>
+						<hr>
+						Bulevar Arsenija Čarnojevića 58, Beograd<br>
+						<a href="http://www.eventim.rs/rs/">eventim.rs</a><br>
+						10:00 - 18:00
+						<br>
+						<h5></h5>
+					</div>
+					
+					
 				</div>
 			</div>
 		</div>
-		<br>
 		<hr>
-
-
 		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!--Footer-->
 
@@ -140,7 +196,9 @@
 						Faculty of Electrical Engineering, University of Belgrade
 					<i>
 				</div>				
-		</footer>
+		</footer>	
+		<!--Uniform----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		
 		
 
 	
