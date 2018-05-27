@@ -585,6 +585,8 @@ function sortirajPoMestu() {
 
 function sortirajOmiljenePoMestu()
 {
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
 	var ima=false;
 	var film_mestoProj = {};
 	film_mestoProj["Skver"] = "Sava Centar";
@@ -600,9 +602,14 @@ function sortirajOmiljenePoMestu()
 			var arr=key.split('_');
 			if (arr[0]=="omiljeni")
 			{
-				var film=arr[1]+"_"+arr[2];
+				var film="";
+				if (page.includes("eng"))
+					film = "movie_" + arr[2];
+				else
+					film = "film_" + arr[2];
 				obj = {};
 				obj.element = localStorage.getItem(film);
+				
 				obj.id = film_mestoProj[arr[3]];
 				ima=true;
 				ids.push(obj);
@@ -623,21 +630,42 @@ function sortirajOmiljenePoMestu()
 
 function sortirajOmiljenePoNazivu()
 {
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
+	var nazivi = {};
+	if (page.includes("eng")) {
+		nazivi["Skver"] = "The Square";
+		nazivi["Tri Bilborda ispred Ebinga u Misuriju"] = "Three Billboards outside Ebbing, Missouri";
+		nazivi["Advokat"] = "Roman J. Israel, Esq.";
+		nazivi["Aurora Borealis: Severna svetlost"] = "Aurora Borealis: Northern lights";
+		nazivi["Oblik vode"] = "The Shape of Water";
+		nazivi["Fantomska nit"] = "Phantom Thread";
+	}
+	
 	var ima=false;
 	document.getElementById("prikaz_mojih_filmova").innerHTML="";
 	var ids = [], obj, i, len;
+	
 	for (i = 0; i < localStorage.length; i++) {
 			key = localStorage.key(i);
 			var arr=key.split('_');
 			if (arr[0]=="omiljeni")
 			{
-				var film=arr[1]+"_"+arr[2];
+				var film="";
+				if (page.includes("eng"))
+					film = "movie_" + arr[2];
+				else
+					film = "film_" + arr[2];
 				obj = {};
 				obj.element = localStorage.getItem(film);
-				obj.id = arr[3];
+				//alert(film);
+				if (page.includes("eng"))
+					obj.id = nazivi[arr[3]];
+				else
+					obj.id = arr[3];
+				
 				ima=true;
 				ids.push(obj);
-				//document.getElementById("prikaz_mojih_filmova").innerHTML+=localStorage.getItem(film);
 			}
 		}
 	if (ima==false)
@@ -655,6 +683,8 @@ function sortirajOmiljenePoNazivu()
 
 function sortirajOmiljenePoBrRez()
 {
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
 	var ima=false;
 	document.getElementById("prikaz_mojih_filmova").innerHTML="";
 	var ids = [], obj, i, len;
@@ -663,7 +693,11 @@ function sortirajOmiljenePoBrRez()
 			var arr=key.split('_');
 			if (arr[0]=="omiljeni")
 			{
-				var film=arr[1]+"_"+arr[2];
+				var film="";
+				if (page.includes("eng"))
+					film = "movie_" + arr[2];
+				else
+					film = "film_" + arr[2];
 				obj = {};
 				obj.element = localStorage.getItem(film);
 				obj.id = parseInt(dohvatiBrRezervacija(arr[3]));
