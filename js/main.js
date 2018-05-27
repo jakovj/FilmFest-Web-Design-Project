@@ -21,6 +21,31 @@ function mymovies_onload()
 	showFavourites();
 	refreshRezervacije();
 }
+function obrisiOmiljene()
+{
+	var ima=false;
+	for (i = 0; i < localStorage.length; i++) {
+			key = localStorage.key(i);
+			var arr=key.split('_');
+			if (arr[0]=="omiljeni")
+			{
+				ima=true;
+				localStorage.removeItem(key);
+				i--;
+			}
+	}
+	if (ima==false)
+	{
+		var path = window.location.pathname;
+		var page = path.split("/").pop();
+		if (page.includes("eng"))
+			alert("No favourite movies");
+		else
+			alert("Nema omiljenih");
+	}
+	location.reload();
+}
+
 function prikaziOmiljene()
 {
 	var ima=false;
@@ -32,6 +57,7 @@ function prikaziOmiljene()
 			{
 				ima=true;
 				var film=arr[1]+"_"+arr[2];
+				if (localStorage.getItem(film)==null) continue;
 				document.getElementById("prikaz_mojih_filmova").innerHTML+=localStorage.getItem(film);
 			}
 		}
@@ -51,6 +77,7 @@ function showFavourites()
 			{
 				ima=true;
 				var film="movie_"+arr[2];
+				if (localStorage.getItem(film)==null) continue;
 				document.getElementById("prikaz_mojih_filmova").innerHTML+=localStorage.getItem(film);
 			}
 		}
@@ -67,10 +94,7 @@ function dodajOmiljeni(film)
 	//alert("film");
 	localStorage.setItem(film,"true");
 }
-function obrisiOmiljene()
-{
 
-}
 function clearLocalStorage()
 {
 	localStorage.clear();
