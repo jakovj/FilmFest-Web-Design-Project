@@ -4,7 +4,6 @@
 
 Web design course project
 
-In progress...
 
 ## Built With
 * HTML
