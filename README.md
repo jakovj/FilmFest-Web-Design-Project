@@ -1,9 +1,9 @@
 # Film Festival
 
-## Getting Started
+## Info
 
 Web design course project
-
+Website available at: https://filmfest.000webhostapp.com
 
 ## Built With
 * HTML
